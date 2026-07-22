@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Roza Lab R&D project intelligence page with market analysis, formulation, SOP, machines, team structure, and workflow visualisation." />
+    <title>Roza Lab R&amp;D · Lab</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <style>
+      .lab-grid {
+        display: grid;
+        gap: 18px;
+      }
+      .lab-grid.three {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .lab-grid.two {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .diagram-shell {
+        padding: 14px;
+      }
+      .diagram-shell img {
+        width: 100%;
+        border-radius: 24px;
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow: hidden;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.62);
+        border: 1px solid var(--line);
+      }
+      .data-table th,
+      .data-table td {
+        padding: 14px 14px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+      .data-table th {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: var(--accent);
+      }
+      .data-table tr:last-child td {
+        border-bottom: 0;
+      }
+      .data-table td strong {
+        display: block;
+        margin-bottom: 4px;
+      }
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .pill-row span {
+        padding: 10px 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.65);
+        color: rgba(17, 17, 17, 0.86);
+        font-size: 0.92rem;
+      }
+      .lab-flow {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+      }
+      .lab-step {
+        padding: 18px;
+        border-radius: 22px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.7);
+        box-shadow: var(--shadow);
+      }
+      .lab-step .num {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        color: var(--accent);
+        margin-bottom: 10px;
+      }
+      .lab-step p {
+        margin-bottom: 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+      .section-note {
+        color: var(--muted);
+        max-width: 72ch;
+        line-height: 1.72;
+      }
+      .pair-card {
+        display: grid;
+        gap: 8px;
+        min-height: 180px;
+      }
+      .pair-card strong {
+        font-size: 1.1rem;
+      }
+      .pair-card em {
+        font-style: normal;
+        color: var(--accent);
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+      }
+      .pair-card p {
+        margin-bottom: 0;
+      }
+      .timeline-strip {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+      }
+      .timeline-strip .card {
+        min-height: 164px;
+      }
+      @media (max-width: 1080px) {
+        .lab-grid.three,
+        .lab-grid.two,
+        .lab-flow,
+        .timeline-strip {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 760px) {
+        .lab-grid.three,
+        .lab-grid.two,
+        .lab-flow,
+        .timeline-strip {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body class="page page-lab">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">RL</span>
+        <div>
+          <p class="eyebrow">Roza Lab R&amp;D</p>
+          <p class="muted">Lab page</p>
+        </div>
+      </div>
+      <nav class="topnav">
+        <a href="index.html">Home</a>
+        <a href="brand.html">Story</a>
+        <a href="menu.html">Taste</a>
+        <a href="operations.html">Craft</a>
+        <a class="active" href="lab.html">Lab</a>
+        <a href="launch.html">Order</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="tag">Project intelligence</p>
+          <div class="display-stack">
+            <strong>roza lab r&amp;d</strong>
+            <h2>ice cream project overview</h2>
+          </div>
+          <p class="lead">
+            This is the project data room for the Roza Lab ice cream concept: market analysis, Zomato pricing bands,
+            scientific pairings, formulation, SOP, machine stack, team structure, and order workflow.
+          </p>
+          <div class="hero-meta">
+            <div class="mini-stat"><strong>Market lens</strong><span>Public Zomato signals and premium spend bands</span></div>
+            <div class="mini-stat"><strong>Science lens</strong><span>Pairings, balance, texture, and service logic</span></div>
+            <div class="mini-stat"><strong>Ops lens</strong><span>Machines, team, SOP, and output flow</span></div>
+          </div>
+          <div class="hero-actions">
+            <a class="button primary" href="#market">Market data</a>
+            <a class="button secondary" href="#workflow">Workflow graph</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="assets/hero.svg" alt="Editorial Roza Lab R&D gelato illustration" />
+          <div class="art-card top reveal">
+            <p><strong>Core promise</strong><br />Premium fusion gelato with scientific pairing logic.</p>
+          </div>
+          <div class="art-card reveal">
+            <p><strong>Project scope</strong><br />Research, formulation, production, and launch system.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="lab-grid three">
+          <article class="card"><h3>Competitive analysis</h3><p>Benchmark the market by price bands, service style, and perceived premium value.</p></article>
+          <article class="card"><h3>Product architecture</h3><p>Curated premium scoops, shakes, sundaes, flights, and take-home tubs.</p></article>
+          <article class="card"><h3>Lab output</h3><p>Formulation, pairing suggestions, SOP, machine stack, and order flow.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="tag">System map</p>
+          <h2>How the project works from data to dessert.</h2>
+          <p class="section-note">This diagram shows the live loop: market inputs shape menu logic, menu logic drives formulation, formulation controls production, and guest feedback returns to the lab.</p>
+        </div>
+        <div class="panel diagram-shell">
+          <img src="assets/roza-lab-system.svg" alt="Roza Lab R&D system map diagram" />
+        </div>
+      </section>
+
+      <section class="section" id="market">
+        <div class="section-head">
+          <p class="tag">Competitive analysis</p>
+          <h2>Observed Bangalore market bands from public Zomato signals.</h2>
+          <p class="section-note">The goal is not to win on lowest price. Roza Lab should win on premium experience, tighter menu curation, better presentation, and stronger repeatability.</p>
+        </div>
+        <div class="panel" style="overflow-x:auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Tier</th>
+                <th>Observed market signal</th>
+                <th>Two-person spend</th>
+                <th>Roza Lab interpretation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Value</strong></td>
+                <td>Neighborhood ice cream / quick dessert shops</td>
+                <td>₹150–200</td>
+                <td>Convenience-led, low ticket, not the target identity.</td>
+              </tr>
+              <tr>
+                <td><strong>Mid-premium</strong></td>
+                <td>Cafes and dessert shops with a better look</td>
+                <td>₹300–400</td>
+                <td>Benchmark for presentation and accessible premium spend.</td>
+              </tr>
+              <tr>
+                <td><strong>Premium experiential</strong></td>
+                <td>Boutique gelato and destination dessert spaces</td>
+                <td>₹600–700</td>
+                <td>Closest reference zone for atmosphere and service theatre.</td>
+              </tr>
+              <tr>
+                <td><strong>Roza Lab target</strong></td>
+                <td>Curated science-led ice cream studio</td>
+                <td>₹209–239 scoop · ₹449–599 sundae · ₹599–649 flight</td>
+                <td>Premium but buyable: curated menu, visible craft, strong repeat rate.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="lab-grid two">
+          <article class="card pair-card">
+            <em>Hero pairings</em>
+            <strong>Lychee + rosewater</strong>
+            <p>Soft floral lift, elegant aroma, and a premium romantic finish.</p>
+            <strong>Mango + passionfruit</strong>
+            <p>Bright tropical acidity with enough sweetness to stay approachable.</p>
+          </article>
+          <article class="card pair-card">
+            <em>Depth pairings</em>
+            <strong>Saffron + pistachio</strong>
+            <p>Luxury aroma, warm nuttiness, and a strong premium cue.</p>
+            <strong>Black sesame + honey</strong>
+            <p>Roast depth balanced by sweetness and a smoother finish.</p>
+          </article>
+          <article class="card pair-card">
+            <em>Fresh pairings</em>
+            <strong>Coconut milk + lime</strong>
+            <p>Tropical, clean, and bright with a refreshing acidic edge.</p>
+            <strong>Green tea + white chocolate</strong>
+            <p>Umami bitterness softened by creamy sweetness.</p>
+          </article>
+          <article class="card pair-card">
+            <em>Rejected pairing</em>
+            <strong>Black sesame + vanilla</strong>
+            <p>Too flat and too familiar. The contrast is weak, so it should stay out of the premium menu.</p>
+            <strong>Rule</strong>
+            <p>Keep the menu exciting, but every combination still has to make sensory sense.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="tag">Formulation</p>
+          <h2>Master base, process controls, and product logic.</h2>
+          <p class="section-note">Use one disciplined base and vary flavor systems around it. That keeps texture consistent while allowing the menu to feel premium and diverse.</p>
+        </div>
+        <div class="lab-grid two">
+          <div class="panel">
+            <h3>Master dairy base per 1 kg mix</h3>
+            <ul class="spec-list">
+              <li><span>Milk</span><strong>580 g</strong></li>
+              <li><span>Cream</span><strong>150 g</strong></li>
+              <li><span>Sugar</span><strong>140 g</strong></li>
+              <li><span>Dextrose / glucose</span><strong>40 g</strong></li>
+              <li><span>Skim milk powder</span><strong>55 g</strong></li>
+              <li><span>Stabilizer / emulsifier</span><strong>3 g</strong></li>
+              <li><span>Salt</span><strong>1 g</strong></li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Process controls</h3>
+            <ul class="spec-list">
+              <li><span>Pasteurize</span><strong>82–85°C for 15–20 sec</strong></li>
+              <li><span>Age the mix</span><strong>4°C for 4–12 hours</strong></li>
+              <li><span>Churn draw temp</span><strong>-5 to -7°C</strong></li>
+              <li><span>Harden</span><strong>-18 to -25°C</strong></li>
+              <li><span>Serve</span><strong>-12 to -15°C</strong></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="workflow">
+        <div class="section-head">
+          <p class="tag">Workflow graph</p>
+          <h2>How each order moves through the lab and counter.</h2>
+        </div>
+        <div class="lab-flow">
+          <article class="lab-step"><div class="num">01</div><h3>Guest order</h3><p>Guest chooses scoop, shake, sundae, or flight at the counter or via order form.</p></article>
+          <article class="lab-step"><div class="num">02</div><h3>POS + check</h3><p>Staff confirms item, flavor, availability, and pickup timing.</p></article>
+          <article class="lab-step"><div class="num">03</div><h3>Production</h3><p>Batch gets scooped, finished, garnished, or assembled with the right temperature.</p></article>
+          <article class="lab-step"><div class="num">04</div><h3>Serve + learn</h3><p>Order is handed over, notes are recorded, and feedback returns to the lab.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="tag">Machine stack and team structure</p>
+          <h2>Minimum equipment and people needed to run it well.</h2>
+        </div>
+        <div class="lab-grid three">
+          <article class="card"><h3>Machines</h3><p>Pasteurizer, batch freezer, blast freezer, dipping cabinet, scale, thermometer, pH meter.</p></article>
+          <article class="card"><h3>Team</h3><p>Manager, chef, prep support, counter service, runner, and pack-out support.</p></article>
+          <article class="card"><h3>QC system</h3><p>Temperature logging, batch weight, overrun, garnish discipline, and holding time checks.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="tag">Product family</p>
+          <h2>What the menu should show on the website.</h2>
+        </div>
+        <div class="timeline-strip">
+          <article class="card"><h3>Scoops</h3><p>Yuzu Cloud Cheesecake, Lychee Rose Signal, Saffron Pistachio Prime, Black Sesame Velvet.</p></article>
+          <article class="card"><h3>Shakes</h3><p>Espresso Brownie Mode, Coconut Lime, Matcha White Chocolate, Mango Passionfruit.</p></article>
+          <article class="card"><h3>Sundaes</h3><p>Premium plated desserts with garnish logic and strong visual hierarchy.</p></article>
+          <article class="card"><h3>Tasting flight</h3><p>Six mini portions, made for discovery and premium shared orders.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="tag">Launch intent</p>
+          <h2>What the site should communicate in one glance.</h2>
+          <p class="section-note">Roza Lab is not a generic ice cream page. It is a research-forward premium project with visible science, strong presentation, and a clear operating logic.</p>
+        </div>
+        <div class="pill-row">
+          <span>Premium fusion</span>
+          <span>Scientific pairing</span>
+          <span>Market intelligence</span>
+          <span>Formulation-first</span>
+          <span>Visible SOP</span>
+          <span>Team structure</span>
+          <span>Workflow graph</span>
+          <span>Best-in-class presentation</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Roza Lab R&amp;D · Lab</p>
+      <p class="muted">Project intelligence, formulation, operations, and visual system.</p>
+    </footer>
+  </body>
+</html>
