@@ -265,13 +265,14 @@ h3 { font-size: 1.08rem; margin-bottom: 8px; letter-spacing: -0.02em; }
 
 .feature-rail { display: grid; gap: 14px; }
 .feature-row {
-  display: grid; grid-template-columns: 180px 1fr auto; gap: 18px; align-items: center;
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
   padding: 18px 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
   background: rgba(255,255,255,0.52);
 }
-.feature-row .index { color: var(--accent); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+.feature-row .index { color: var(--accent); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; min-width: 54px; }
 .feature-row strong { font-size: 1.1rem; }
-.feature-row span { color: var(--muted); }
+.feature-row span { color: var(--muted); flex: 1 1 360px; }
+.feature-row strong:last-child { margin-left: auto; white-space: nowrap; }
 
 .spec-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
 .spec-list li {
@@ -318,7 +319,9 @@ h3 { font-size: 1.08rem; margin-bottom: 8px; letter-spacing: -0.02em; }
 @keyframes shimmer { 0% { transform: translateX(-80%) rotate(20deg); } 100% { transform: translateX(80%) rotate(20deg); } }
 
 @media (max-width: 1080px) {
-  .hero, .split, .grid.two, .grid.three, .grid.four, .menu-grid, .story-grid, .order-grid, .story-line, .feature-row, .field-grid { grid-template-columns: 1fr 1fr; }
+  .hero, .split, .grid.two, .grid.three, .grid.four, .menu-grid, .story-grid, .order-grid, .story-line, .field-grid {
+    grid-template-columns: 1fr 1fr;
+  }
   .hero { min-height: auto; }
   .hero-art { min-height: 620px; }
 }
@@ -326,7 +329,9 @@ h3 { font-size: 1.08rem; margin-bottom: 8px; letter-spacing: -0.02em; }
 @media (max-width: 760px) {
   .topbar { flex-direction: column; align-items: flex-start; padding: 16px; }
   .topnav { justify-content: flex-start; }
-  .hero, .split, .grid.two, .grid.three, .grid.four, .menu-grid, .story-grid, .order-grid, .story-line, .feature-row, .field-grid { grid-template-columns: 1fr; }
+  .hero, .split, .grid.two, .grid.three, .grid.four, .menu-grid, .story-grid, .order-grid, .story-line, .field-grid {
+    grid-template-columns: 1fr;
+  }
   .hero { padding-top: 18px; }
   .hero-copy { padding: 24px; }
   .hero-meta { grid-template-columns: 1fr; }
