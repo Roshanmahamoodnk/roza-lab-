@@ -1,6 +1,6 @@
 document.documentElement.classList.add('js');
 
-const revealTargets = document.querySelectorAll('.hero-copy, .hero-art, .section-head, .card, .menu-card, .price-card, .quote-panel, .timeline, .kpi-panel, .footer');
+const revealTargets = document.querySelectorAll('.hero-copy, .hero-art, .section-head, .card, .menu-card, .price-card, .quote-panel, .timeline, .kpi-panel, .form-panel, .footer, .feature-row, .story-line');
 revealTargets.forEach((el) => el.classList.add('reveal'));
 
 const observer = new IntersectionObserver(
@@ -12,7 +12,7 @@ const observer = new IntersectionObserver(
       }
     }
   },
-  { threshold: 0.16, rootMargin: '0px 0px -10% 0px' }
+  { threshold: 0.14, rootMargin: '0px 0px -8% 0px' }
 );
 
 revealTargets.forEach((el) => observer.observe(el));
@@ -30,8 +30,23 @@ window.addEventListener('pointerleave', () => {
   root.style.setProperty('--my', '20%');
 });
 
-const marquee = document.querySelector('.ticker-track');
-if (marquee) {
-  const clone = marquee.cloneNode(true);
-  marquee.parentElement.appendChild(clone);
+const ticker = document.querySelector('.ticker-track');
+if (ticker && ticker.parentElement) {
+  ticker.parentElement.appendChild(ticker.cloneNode(true));
+}
+
+const orderForm = document.querySelector('[data-order-form]');
+if (orderForm) {
+  const summary = document.querySelector('[data-order-summary]');
+  const fields = orderForm.querySelectorAll('input, select, textarea');
+  const updateSummary = () => {
+    if (!summary) return;
+    const name = orderForm.querySelector('[name="name"]')?.value?.trim() || 'Guest';
+    const flavor = orderForm.querySelector('[name="flavor"]')?.value || 'Choose a flavor';
+    const occasion = orderForm.querySelector('[name="occasion"]')?.value || 'No occasion selected';
+    const quantity = orderForm.querySelector('[name="quantity"]')?.value || '1';
+    summary.innerHTML = `<strong>${name}</strong><p>${quantity} item(s) · ${flavor} · ${occasion}</p>`;
+  };
+  fields.forEach((field) => field.addEventListener('input', updateSummary));
+  updateSummary();
 }
