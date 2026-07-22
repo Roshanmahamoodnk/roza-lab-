@@ -1,6 +1,6 @@
 document.documentElement.classList.add('js');
 
-const revealTargets = document.querySelectorAll('.hero-copy, .hero-art, .section-head, .card, .menu-card, .price-card, .quote-panel, .timeline, .kpi-panel, .form-panel, .footer, .feature-row, .story-line, .panel');
+const revealTargets = document.querySelectorAll('.hero-copy, .hero-art, .section-head, .card, .menu-card, .price-card, .quote-panel, .timeline, .kpi-panel, .form-panel, .footer, .feature-row, .story-line, .panel, .lab-step, .diagram-shell');
 revealTargets.forEach((el) => el.classList.add('reveal'));
 
 const observer = new IntersectionObserver(
