@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Roza Lab R&amp;D · Launch</title>
+    <title>Roza Lab R&amp;D · Order</title>
     <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
   </head>
@@ -13,71 +13,115 @@
         <span class="brand-mark">RL</span>
         <div>
           <p class="eyebrow">Roza Lab R&amp;D</p>
-          <p class="muted">Launch page</p>
+          <p class="muted">Order page</p>
         </div>
       </div>
       <nav class="topnav">
         <a href="index.html">Home</a>
-        <a href="brand.html">Brand</a>
-        <a href="menu.html">Menu</a>
-        <a href="operations.html">Operations</a>
-        <a class="active" href="launch.html">Launch</a>
+        <a href="brand.html">Story</a>
+        <a href="menu.html">Taste</a>
+        <a href="operations.html">Craft</a>
+        <a class="active" href="launch.html">Order</a>
       </nav>
     </header>
 
     <main>
       <section class="hero">
         <div class="hero-copy">
-          <p class="tag">Rollout plan</p>
-          <h1>Launch with a clear mood, strong content, and a tight menu.</h1>
+          <p class="tag">Ordering module</p>
+          <div class="display-stack">
+            <strong>order</strong>
+            <h2>modulo ordinazione web</h2>
+          </div>
           <p class="lead">
-            Use this page to plan opening day, location fit, content strategy, and the first round of refinements.
+            A clean, low-friction order form inspired by the references: simple fields, premium spacing,
+            and a calm layout that keeps the experience easy to complete.
           </p>
           <div class="hero-meta">
-            <div class="mini-stat"><strong>Location fit</strong><span>Koramangala, Indiranagar, HSR, Whitefield</span></div>
-            <div class="mini-stat"><strong>Target crowd</strong><span>IT, business, couples, social groups</span></div>
-            <div class="mini-stat"><strong>Service window</strong><span>Late afternoon through night cravings</span></div>
+            <div class="mini-stat"><strong>Pickup</strong><span>In-store or takeaway</span></div>
+            <div class="mini-stat"><strong>Best for</strong><span>Office orders, dates, and late-night desserts</span></div>
+            <div class="mini-stat"><strong>Lead time</strong><span>Pre-order or same-day pickup</span></div>
           </div>
         </div>
         <div class="hero-art">
-          <img src="assets/hero.svg" alt="Abstract premium Roza Lab R&D hero illustration" />
+          <img src="assets/hero.svg" alt="Editorial Roza Lab R&D gelato illustration" />
         </div>
       </section>
 
-      <section class="section split">
-        <div>
+      <section class="section order-grid">
+        <div class="form-panel">
           <div class="section-head narrow">
-            <p class="tag">Opening KPIs</p>
-            <h2>What to track in the first month.</h2>
+            <p class="tag">Place an order</p>
+            <h2>tell us what to prepare</h2>
           </div>
-          <div class="timeline">
-            <ol>
-              <li>Average order value</li>
-              <li>Scoop mix versus sundae mix</li>
-              <li>Best-selling flavor by time of day</li>
-              <li>Wastage and hold time</li>
-              <li>Repeat visits and social engagement</li>
-            </ol>
-          </div>
+          <form class="form-grid" data-order-form>
+            <div class="field-grid">
+              <input class="input" name="name" placeholder="Your name" />
+              <input class="input" name="phone" placeholder="Phone number" />
+              <select class="select" name="occasion">
+                <option value="">Occasion</option>
+                <option>Dessert run</option>
+                <option>Date night</option>
+                <option>Office treat</option>
+                <option>Gift order</option>
+              </select>
+              <select class="select" name="flavor">
+                <option value="">Choose a flavor</option>
+                <option>Yuzu Cloud Cheesecake</option>
+                <option>Lychee Rose Signal</option>
+                <option>Saffron Pistachio Prime</option>
+                <option>Black Sesame Velvet</option>
+                <option>Coconut Lime Kernel</option>
+                <option>Espresso Brownie Mode</option>
+              </select>
+            </div>
+            <div class="field-grid">
+              <select class="select" name="quantity">
+                <option value="1">1 item</option>
+                <option value="2">2 items</option>
+                <option value="3">3 items</option>
+                <option value="4">4 items</option>
+              </select>
+              <select class="select" name="time">
+                <option value="">Pickup time</option>
+                <option>Today 4–6 PM</option>
+                <option>Today 6–8 PM</option>
+                <option>Tonight 8–10 PM</option>
+                <option>Tomorrow</option>
+              </select>
+            </div>
+            <textarea class="textarea" name="notes" placeholder="Any notes — sweetness level, allergies, packing, or message card"></textarea>
+            <div class="form-actions">
+              <button class="button primary" type="submit">Send order request</button>
+              <span class="muted">We can adjust flavors, portions, or pickup timing.</span>
+            </div>
+          </form>
         </div>
-        <div>
-          <div class="section-head narrow">
-            <p class="tag">First 30 days</p>
-            <h2>Launch in stages, not all at once.</h2>
+
+        <aside class="form-panel side-note">
+          <div class="slot" data-order-summary>
+            <strong>Guest</strong>
+            <p>1 item(s) · Choose a flavor · No occasion selected</p>
           </div>
-          <div class="grid two">
-            <article class="card"><h3>Week 1</h3><p>Soft launch with eight hero flavors and one tasting flight.</p></article>
-            <article class="card"><h3>Week 2</h3><p>Collect feedback on sweetness, aroma, and texture.</p></article>
-            <article class="card"><h3>Week 3</h3><p>Promote date-night sundaes and after-work combos.</p></article>
-            <article class="card"><h3>Week 4</h3><p>Retain winners and remove weak flavors from the board.</p></article>
+          <div class="slot">
+            <h3>Best combinations</h3>
+            <p>Lychee + rosewater, saffron + pistachio, and mango + passionfruit.</p>
           </div>
-        </div>
+          <div class="slot">
+            <h3>Pricing guide</h3>
+            <p>Single scoops begin at ₹209, flights at ₹599, and premium sundaes at ₹449.</p>
+          </div>
+          <div class="slot">
+            <h3>Order style</h3>
+            <p>Use this page for clean pickup requests or as a visual stand-in for a web ordering module.</p>
+          </div>
+        </aside>
       </section>
     </main>
 
     <footer class="footer">
-      <p>Roza Lab R&amp;D · Launch</p>
-      <p class="muted">Opening plan and rollout strategy.</p>
+      <p>Roza Lab R&amp;D · Order</p>
+      <p class="muted">Clean request form and launch-ready module.</p>
     </footer>
   </body>
 </html>
