@@ -1,6 +1,6 @@
 document.documentElement.classList.add('js');
 
-const revealTargets = document.querySelectorAll('.hero-copy, .hero-art, .section-head, .card, .menu-card, .price-card, .quote-panel, .timeline, .kpi-panel, .form-panel, .footer, .feature-row, .story-line');
+const revealTargets = document.querySelectorAll('.hero-copy, .hero-art, .section-head, .card, .menu-card, .price-card, .quote-panel, .timeline, .kpi-panel, .form-panel, .footer, .feature-row, .story-line, .panel');
 revealTargets.forEach((el) => el.classList.add('reveal'));
 
 const observer = new IntersectionObserver(
@@ -48,5 +48,9 @@ if (orderForm) {
     summary.innerHTML = `<strong>${name}</strong><p>${quantity} item(s) · ${flavor} · ${occasion}</p>`;
   };
   fields.forEach((field) => field.addEventListener('input', updateSummary));
+  orderForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    updateSummary();
+  });
   updateSummary();
 }
