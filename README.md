@@ -16,3 +16,4 @@ Premium ice cream research studio for Project One · Carino study.
 - Science-led ice cream menu study
 - Bangalore market positioning
 - Production and service SOP
+- Motion-led, editorial-style presentation
