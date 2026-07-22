@@ -2,9 +2,13 @@
 
 Premium ice cream research studio for Project One · Carino study.
 
-## Site
+## Site structure
 
-Open the `index.html` website in this repository to view the Roza Lab R&D landing page with a hero image, menu study, pricing, SOP, equipment, and sensory pairings.
+- `index.html` — home
+- `brand.html` — identity and positioning
+- `menu.html` — menu and pricing
+- `operations.html` — SOP, equipment, staffing
+- `launch.html` — launch plan and rollout
 
 ## Focus
 
