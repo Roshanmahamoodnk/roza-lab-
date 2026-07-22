@@ -88,7 +88,8 @@ a {
   color: var(--muted);
 }
 
-.topnav a:hover {
+.topnav a:hover,
+.topnav a.active {
   color: var(--text);
 }
 
