@@ -1,134 +1,102 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
-  <title id="title">Roza Lab R&amp;D hero illustration</title>
-  <desc id="desc">A cinematic dark gelato-lab illustration with layered glass panels, glowing spheres, and a premium dessert centerpiece.</desc>
+  <title id="title">Roza Lab R&D editorial gelato illustration</title>
+  <desc id="desc">A light, editorial gelato scene with warm cream background, clean framing, and premium dessert forms.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0d0b16"/>
-      <stop offset="48%" stop-color="#171326"/>
-      <stop offset="100%" stop-color="#09070f"/>
+      <stop offset="0%" stop-color="#fbf7f0"/>
+      <stop offset="100%" stop-color="#f0e6d6"/>
     </linearGradient>
-    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ffbfd0"/>
-      <stop offset="100%" stop-color="#f27aa3"/>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#f6efe5" stop-opacity="0.88"/>
     </linearGradient>
-    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#bff8f1"/>
-      <stop offset="100%" stop-color="#6fd0c7"/>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c1a18"/>
+      <stop offset="100%" stop-color="#3a312a"/>
     </linearGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ffebba"/>
-      <stop offset="100%" stop-color="#caa041"/>
+    <linearGradient id="rose" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e9b6c1"/>
+      <stop offset="100%" stop-color="#cb8090"/>
     </linearGradient>
-    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.13"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04"/>
+    <linearGradient id="pistachio" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d6e0bd"/>
+      <stop offset="100%" stop-color="#9eb46c"/>
     </linearGradient>
-    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
+    <linearGradient id="yuzu" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6e7a0"/>
+      <stop offset="100%" stop-color="#d5b84a"/>
     </linearGradient>
-    <pattern id="grid" width="52" height="52" patternUnits="userSpaceOnUse">
-      <path d="M52 0H0V52" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
-    </pattern>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.36"/>
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#3d2d1b" flood-opacity="0.15"/>
     </filter>
-    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="22"/>
+    <filter id="blur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="28"/>
     </filter>
   </defs>
 
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <rect width="1600" height="900" fill="url(#grid)" opacity="0.8"/>
-
-  <circle cx="290" cy="165" r="220" fill="#f59eb0" opacity="0.08"/>
-  <circle cx="1330" cy="140" r="240" fill="#8dd9d4" opacity="0.08"/>
-  <circle cx="1380" cy="760" r="260" fill="#d8b35d" opacity="0.08"/>
-
-  <g filter="url(#softGlow)" opacity="0.85">
-    <ellipse cx="787" cy="430" rx="250" ry="130" fill="#f59eb0" opacity="0.13"/>
-    <ellipse cx="880" cy="395" rx="210" ry="100" fill="#8dd9d4" opacity="0.11"/>
-    <ellipse cx="700" cy="520" rx="200" ry="110" fill="#d8b35d" opacity="0.1"/>
-  </g>
+  <circle cx="250" cy="170" r="190" fill="#d8b183" opacity="0.12" filter="url(#blur)"/>
+  <circle cx="1310" cy="160" r="240" fill="#d7c0a0" opacity="0.14" filter="url(#blur)"/>
+  <circle cx="1300" cy="760" r="220" fill="#c67a8b" opacity="0.1" filter="url(#blur)"/>
 
   <g filter="url(#shadow)">
-    <rect x="150" y="130" rx="34" ry="34" width="1300" height="650" fill="url(#panel)" stroke="#ffffff" stroke-opacity="0.12"/>
-    <rect x="205" y="182" rx="28" ry="28" width="365" height="540" fill="#11101c" fill-opacity="0.92" stroke="#ffffff" stroke-opacity="0.08"/>
-    <rect x="620" y="160" rx="28" ry="28" width="360" height="580" fill="#181426" fill-opacity="0.88" stroke="#ffffff" stroke-opacity="0.08"/>
-    <rect x="1030" y="182" rx="28" ry="28" width="315" height="540" fill="#11101c" fill-opacity="0.92" stroke="#ffffff" stroke-opacity="0.08"/>
+    <rect x="152" y="132" width="1296" height="636" rx="34" fill="url(#frame)" stroke="#1c1a18" stroke-opacity="0.08"/>
+    <rect x="204" y="184" width="420" height="540" rx="28" fill="#ffffff" stroke="#1c1a18" stroke-opacity="0.06"/>
+    <rect x="660" y="160" width="320" height="588" rx="28" fill="#f8f3eb" stroke="#1c1a18" stroke-opacity="0.06"/>
+    <rect x="1024" y="184" width="320" height="540" rx="28" fill="#ffffff" stroke="#1c1a18" stroke-opacity="0.06"/>
   </g>
 
   <g>
-    <rect x="250" y="250" rx="20" ry="20" width="178" height="56" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
-    <text x="339" y="286" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="22" fill="#fff2f6" font-weight="700">Roza Lab</text>
+    <text x="238" y="236" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="20" fill="#9b6c3d" letter-spacing="0.22em">ROZA LAB R&amp;D</text>
+    <text x="238" y="298" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="62" font-weight="800" fill="url(#ink)">the taste</text>
+    <text x="238" y="358" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="62" font-weight="800" fill="url(#ink)">of making it</text>
+    <text x="238" y="422" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="26" fill="#5f5347">premium gelato, modern cafe mood</text>
 
-    <text x="252" y="362" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="48" fill="#f8f2ec" font-weight="800">R&amp;D</text>
-    <text x="252" y="416" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="26" fill="#e0d7e8">Project One</text>
-    <text x="252" y="454" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="26" fill="#e0d7e8">Carino Study</text>
+    <rect x="238" y="526" width="248" height="58" rx="18" fill="#fffdf8" stroke="#1c1a18" stroke-opacity="0.08"/>
+    <text x="362" y="562" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="700" fill="#1c1a18">Since 2026 in Bangalore</text>
 
-    <rect x="252" y="530" rx="20" ry="20" width="242" height="58" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.1"/>
-    <text x="373" y="566" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="20" fill="#f6d58a" font-weight="700">Premium dessert lab</text>
-
-    <rect x="252" y="616" rx="18" ry="18" width="242" height="74" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
-    <text x="275" y="645" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16" fill="#b8b2c4">Signature direction</text>
-    <text x="275" y="671" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" fill="#f8f2ec" font-weight="600">Yuzu · Pistachio · Rose · Espresso</text>
+    <rect x="238" y="612" width="248" height="82" rx="18" fill="#fffdf8" stroke="#1c1a18" stroke-opacity="0.08"/>
+    <text x="260" y="642" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16" fill="#7d7469">Signature direction</text>
+    <text x="260" y="670" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" fill="#1c1a18" font-weight="600">Yuzu · Lychee · Saffron · Espresso</text>
   </g>
 
-  <g transform="translate(650 220)">
-    <circle cx="150" cy="138" r="118" fill="#f59eb0" opacity="0.14"/>
-    <circle cx="254" cy="112" r="74" fill="#8dd9d4" opacity="0.14"/>
-    <circle cx="92" cy="234" r="88" fill="#d8b35d" opacity="0.12"/>
+  <g transform="translate(700 210)">
+    <rect x="0" y="0" width="220" height="120" rx="28" fill="#ffffff" stroke="#1c1a18" stroke-opacity="0.08"/>
+    <text x="26" y="42" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" fill="#9b6c3d" letter-spacing="0.18em">FLAVOR STUDY</text>
+    <text x="26" y="78" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="28" fill="#1c1a18" font-weight="700">Balance + texture</text>
 
-    <rect x="36" y="62" width="340" height="272" rx="32" fill="#0e0c18" fill-opacity="0.54" stroke="#ffffff" stroke-opacity="0.1"/>
-    <path d="M104 108h196c18 0 32 14 32 32v78c0 18-14 32-32 32H104c-18 0-32-14-32-32v-78c0-18 14-32 32-32z" fill="#ffffff" fill-opacity="0.05"/>
+    <ellipse cx="192" cy="188" rx="112" ry="58" fill="#e4dac7" opacity="0.6"/>
+    <circle cx="152" cy="210" r="120" fill="url(#yuzu)"/>
+    <circle cx="250" cy="172" r="88" fill="url(#rose)"/>
+    <circle cx="112" cy="114" r="92" fill="url(#pistachio)"/>
 
-    <path d="M126 184c26-60 92-86 154-70 26 7 49 21 67 42 10 12 18 27 22 43 8 31 3 63-12 88-15 25-41 41-72 48-40 10-85 5-122-14-23-11-40-28-52-49-13-23-14-47-5-88z" fill="url(#pink)"/>
-    <path d="M154 206c20-38 62-58 103-51 17 3 32 11 43 23 7 7 12 16 15 26 5 19 4 38-4 54-8 16-24 28-44 34-29 8-61 5-87-7-16-8-28-19-35-33-7-13-8-29 -1-46z" fill="#fff7fb" opacity="0.44"/>
+    <circle cx="106" cy="110" r="10" fill="#fff7e4"/>
+    <circle cx="242" cy="166" r="10" fill="#fff7e4"/>
+    <circle cx="176" cy="232" r="8" fill="#fff7e4"/>
 
-    <circle cx="272" cy="128" r="10" fill="#fff2cc"/>
-    <circle cx="232" cy="92" r="8" fill="#fff2cc"/>
-    <circle cx="192" cy="136" r="6" fill="#fff2cc"/>
-    <circle cx="284" cy="190" r="7" fill="#fff2cc"/>
-
-    <path d="M116 310c0-18 14-32 32-32h132c18 0 32 14 32 32v16H116v-16z" fill="#272134"/>
-    <path d="M134 326h180c0 58-41 94-90 94s-90-36-90-94z" fill="#191725"/>
-    <path d="M136 336h176c0 46-39 76-88 76s-88-30-88-76z" fill="url(#gold)"/>
-    <rect x="116" y="326" width="220" height="18" rx="9" fill="#fff" fill-opacity="0.06"/>
-    <path d="M120 364c48 28 112 36 176 18" fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round"/>
+    <path d="M90 318c0-26 20-46 46-46h110c26 0 46 20 46 46v18H90v-18z" fill="#2e2a25"/>
+    <path d="M112 336h168c0 54-36 88-84 88s-84-34-84-88z" fill="#1c1a18"/>
+    <path d="M118 342h156c0 40-33 66-78 66s-78-26-78-66z" fill="#f7f0dc"/>
+    <path d="M120 364c44 24 98 28 148 12" fill="none" stroke="#9b6c3d" stroke-opacity="0.24" stroke-width="3" stroke-linecap="round"/>
   </g>
 
-  <g transform="translate(1048 228)">
-    <text x="0" y="0" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="22" fill="#ddd6e8" font-weight="700">Flavor science</text>
-    <rect x="0" y="24" width="210" height="12" rx="6" fill="#ffffff" fill-opacity="0.08"/>
-    <rect x="0" y="24" width="164" height="12" rx="6" fill="url(#mint)"/>
+  <g transform="translate(1054 220)">
+    <text x="0" y="0" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="22" fill="#9b6c3d" letter-spacing="0.16em">EDITION</text>
+    <rect x="0" y="28" width="214" height="12" rx="6" fill="#ece4d7"/>
+    <rect x="0" y="28" width="160" height="12" rx="6" fill="#1c1a18" opacity="0.85"/>
 
-    <g transform="translate(0 76)">
-      <circle cx="26" cy="26" r="20" fill="#f59eb0" opacity="0.92"/>
-      <circle cx="86" cy="26" r="20" fill="#8dd9d4" opacity="0.92"/>
-      <circle cx="146" cy="26" r="20" fill="#d8b35d" opacity="0.92"/>
-      <circle cx="206" cy="26" r="20" fill="#fff1b8" opacity="0.92"/>
+    <g transform="translate(0 84)">
+      <rect x="0" y="0" width="238" height="112" rx="24" fill="#fbf7f0" stroke="#1c1a18" stroke-opacity="0.08"/>
+      <text x="18" y="36" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" fill="#1c1a18" font-weight="700">Pairings that work</text>
+      <text x="18" y="66" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" fill="#5f5347">Lychee + rosewater</text>
+      <text x="18" y="92" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" fill="#5f5347">Saffron + pistachio</text>
     </g>
 
-    <g transform="translate(0 170)" fill="#f2edf9" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18">
-      <text x="0" y="0">Acid + fat</text>
-      <text x="0" y="38">Sweet + umami</text>
-      <text x="0" y="76">Aroma + cream</text>
-      <text x="0" y="114">Bitter + sweet</text>
+    <g transform="translate(0 238)">
+      <rect x="0" y="0" width="238" height="112" rx="24" fill="#fbf7f0" stroke="#1c1a18" stroke-opacity="0.08"/>
+      <text x="18" y="36" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" fill="#1c1a18" font-weight="700">Price ladder</text>
+      <text x="18" y="66" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" fill="#5f5347">Scoops · shakes · sundaes</text>
+      <text x="18" y="92" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" fill="#5f5347">Premium but buyable</text>
     </g>
-
-    <g transform="translate(0 316)">
-      <rect x="0" y="0" width="238" height="148" rx="24" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.08"/>
-      <text x="20" y="38" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" fill="#f6d58a" font-weight="700">Visual finish</text>
-      <text x="20" y="68" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" fill="#e8e1ef">Minimal garnish</text>
-      <text x="20" y="96" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" fill="#e8e1ef">High contrast</text>
-      <text x="20" y="124" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" fill="#e8e1ef">Editorial plating</text>
-    </g>
-  </g>
-
-  <g opacity="0.9">
-    <circle cx="1292" cy="760" r="18" fill="#f59eb0"/>
-    <circle cx="1350" cy="716" r="10" fill="#8dd9d4"/>
-    <circle cx="1408" cy="766" r="14" fill="#d8b35d"/>
-    <circle cx="1460" cy="714" r="9" fill="#fff1b8"/>
   </g>
 </svg>
