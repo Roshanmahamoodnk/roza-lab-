@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Roza Lab R&D system map</title>
+  <desc id="desc">A premium workflow diagram showing market intelligence, pairing, formulation, production, service, and feedback loops for the ice cream project.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbf7f0"/>
+      <stop offset="100%" stop-color="#f1e7d9"/>
+    </linearGradient>
+    <linearGradient id="box" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f7f2ea"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c98f63"/>
+      <stop offset="100%" stop-color="#d9b37a"/>
+    </linearGradient>
+    <linearGradient id="rose" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#cf7e93"/>
+      <stop offset="100%" stop-color="#e5b4bd"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5fa39b"/>
+      <stop offset="100%" stop-color="#b8ddd8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#403124" flood-opacity="0.13"/>
+    </filter>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L14,7 L0,14 z" fill="#9b6c3d"/>
+    </marker>
+    <style>
+      .title { font: 800 36px Inter, ui-sans-serif, system-ui, sans-serif; fill: #1a1714; letter-spacing: -0.04em; }
+      .subtitle { font: 500 18px Inter, ui-sans-serif, system-ui, sans-serif; fill: #5b5349; }
+      .label { font: 700 18px Inter, ui-sans-serif, system-ui, sans-serif; fill: #1a1714; }
+      .body { font: 500 15px Inter, ui-sans-serif, system-ui, sans-serif; fill: #5d554a; }
+      .small { font: 600 13px Inter, ui-sans-serif, system-ui, sans-serif; fill: #8e6d47; letter-spacing: 0.16em; text-transform: uppercase; }
+      .chip { font: 700 14px Inter, ui-sans-serif, system-ui, sans-serif; fill: #1a1714; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="250" cy="160" r="210" fill="#e2c59e" opacity="0.12"/>
+  <circle cx="1320" cy="160" r="240" fill="#d7c0ce" opacity="0.12"/>
+  <circle cx="1290" cy="760" r="220" fill="#b7d9d6" opacity="0.09"/>
+
+  <text x="80" y="78" class="small">Roza Lab R&amp;D · project system map</text>
+  <text x="80" y="126" class="title">Ice cream research loop</text>
+  <text x="80" y="160" class="subtitle">Data in, formulation out, service feedback back into the lab.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="210" width="280" height="146" rx="28" fill="url(#box)" stroke="#decfbf"/>
+    <rect x="80" y="210" width="280" height="40" rx="28" fill="url(#rose)" opacity="0.9"/>
+    <text x="102" y="236" class="chip" fill="#fff">Market intelligence</text>
+    <text x="102" y="286" class="label">Zomato + competitor scan</text>
+    <text x="102" y="312" class="body">Price bands, menu length,</text>
+    <text x="102" y="334" class="body">review themes, and order cues.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="390" width="280" height="146" rx="28" fill="url(#box)" stroke="#decfbf"/>
+    <rect x="80" y="390" width="280" height="40" rx="28" fill="url(#accent)" opacity="0.92"/>
+    <text x="102" y="416" class="chip" fill="#fff">Pricing frame</text>
+    <text x="102" y="466" class="label">Value · mid · premium</text>
+    <text x="102" y="492" class="body">₹150–200, ₹300–400,</text>
+    <text x="102" y="514" class="body">₹600–700 for two people.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="570" width="280" height="150" rx="28" fill="url(#box)" stroke="#decfbf"/>
+    <rect x="80" y="570" width="280" height="40" rx="28" fill="url(#mint)" opacity="0.95"/>
+    <text x="102" y="596" class="chip" fill="#fff">Guest target</text>
+    <text x="102" y="646" class="label">IT, business, couples</text>
+    <text x="102" y="672" class="body">Late afternoon, date night,</text>
+    <text x="102" y="694" class="body">late-night dessert moments.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="420" y="210" width="430" height="510" rx="32" fill="url(#box)" stroke="#decfbf"/>
+    <rect x="420" y="210" width="430" height="42" rx="32" fill="#efdcc2"/>
+    <text x="442" y="238" class="chip">Menu architecture</text>
+    <text x="442" y="292" class="label">Scientific pairing engine</text>
+    <text x="442" y="322" class="body">• Lychee + rosewater</text>
+    <text x="442" y="348" class="body">• Mango + passionfruit</text>
+    <text x="442" y="374" class="body">• Coconut milk + lime</text>
+    <text x="442" y="400" class="body">• Green tea + white chocolate</text>
+    <text x="442" y="426" class="body">• Saffron + pistachio</text>
+    <text x="442" y="452" class="body">• Black sesame + honey</text>
+    <text x="442" y="496" class="label">Rejected pairing</text>
+    <text x="442" y="524" class="body">Black sesame + vanilla — too flat, weak contrast.</text>
+    <text x="442" y="576" class="label">Hero product system</text>
+    <text x="442" y="604" class="body">Scoops, shakes, sundaes, tasting flights, tubs.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="900" y="210" width="640" height="242" rx="32" fill="url(#box)" stroke="#decfbf"/>
+    <rect x="900" y="210" width="640" height="42" rx="32" fill="#f2e7d6"/>
+    <text x="924" y="238" class="chip">Production SOP</text>
+    <text x="924" y="292" class="label">Base · pasteurize · age · churn · harden · serve</text>
+    <text x="924" y="326" class="body">Master dairy base: milk 580 g · cream 150 g · sugar 140 g · dextrose 40 g · SMP 55 g · stabilizer 3 g · salt 1 g</text>
+    <text x="924" y="358" class="body">Pasteurize 82–85°C for 15–20 sec · age at 4°C for 4–12 h · churn to -5 to -7°C draw temp</text>
+    <text x="924" y="390" class="body">Blast harden at -18 to -25°C · serve at -12 to -15°C for best texture.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="900" y="490" width="640" height="230" rx="32" fill="url(#box)" stroke="#decfbf"/>
+    <rect x="900" y="490" width="640" height="42" rx="32" fill="#e8dfcf"/>
+    <text x="924" y="518" class="chip">Operating model</text>
+    <text x="924" y="570" class="label">Team + machine stack + QC</text>
+    <text x="924" y="604" class="body">Team: manager · chef · prep support · service staff</text>
+    <text x="924" y="636" class="body">Machines: pasteurizer · batch freezer · blast freezer · dipping cabinet</text>
+    <text x="924" y="668" class="body">QC: weight, temperature logs, overrun, holding time, and garnish discipline</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="760" width="1460" height="92" rx="26" fill="#fffaf3" stroke="#decfbf"/>
+    <text x="106" y="796" class="small">Workflow graph</text>
+    <text x="106" y="828" class="body">Guest order → POS check → flavor pick → scoop / sundae / shake build → garnish → serve → feedback log → lab iteration</text>
+  </g>
+
+  <g fill="none" stroke="#9b6c3d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <path d="M360 284H410" marker-end="url(#arrow)"/>
+    <path d="M360 462H410" marker-end="url(#arrow)"/>
+    <path d="M360 642H410" marker-end="url(#arrow)"/>
+    <path d="M850 464H900" marker-end="url(#arrow)"/>
+    <path d="M1150 452V486" marker-end="url(#arrow)"/>
+    <path d="M1280 720V748" marker-end="url(#arrow)"/>
+  </g>
+
+  <g opacity="0.75">
+    <circle cx="360" cy="284" r="7" fill="#9b6c3d"/>
+    <circle cx="360" cy="462" r="7" fill="#9b6c3d"/>
+    <circle cx="360" cy="642" r="7" fill="#9b6c3d"/>
+    <circle cx="850" cy="464" r="7" fill="#9b6c3d"/>
+  </g>
+</svg>
