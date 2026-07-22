@@ -1,18 +1,22 @@
 # Roza Lab R&D
 
-Editorial gelato studio website for Project One · Carino study.
+Premium ice cream research studio for Project One · Carino study.
 
 ## Site structure
 
 - `index.html` — home
-- `brand.html` — story
-- `menu.html` — taste
-- `operations.html` — craft
-- `launch.html` — order module
+- `brand.html` — identity and positioning
+- `menu.html` — menu and pricing
+- `operations.html` — SOP, equipment, staffing
+- `lab.html` — project data room
+- `launch.html` — launch plan and order module
 
-## Direction
+## Focus
 
-- Light, editorial, image-led layout
-- Premium boutique gelateria mood
-- Large typography and restrained spacing
-- Clean ordering flow inspired by Italian gelateria sites
+- Premium visual identity
+- Science-led ice cream menu study
+- Bangalore market positioning
+- Competitive analysis and pricing bands
+- Production and service SOP
+- Team structure and workflow graph
+- Motion-led, editorial-style presentation
