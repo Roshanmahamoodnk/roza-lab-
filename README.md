@@ -12,6 +12,15 @@ Cryogenic flavour engineering site for Carino. The main experience is a dark, ci
 - `lab.html` — evidence room and build trace
 - `launch.html` — client intake and tasting requests
 
+## Live assistant backend
+- `assistant-server.js` — Node/Express assistant endpoint for `/api/assistant`
+- `.env.example` — environment variables for OpenAI, Tavily, and LangSmith tracing
+
+## Live assistant setup
+- Serve the static site and the assistant backend from the same origin, or set `ROZA_CONFIG.assistantEndpoint` to your deployed API URL.
+- Set `LANGCHAIN_TRACING_V2=true`, `LANGCHAIN_PROJECT=roza-lab-assistant`, and the matching LangSmith / LangChain API key env vars on the backend.
+- Set `OPENAI_API_KEY` and `TAVILY_API_KEY` so the assistant can research live and answer as Roza Lab Assistant.
+
 ## Focus
 - premium, human-authored design
 - advanced motion and atmospheric visuals
