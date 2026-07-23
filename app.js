@@ -1,7 +1,17 @@
 document.documentElement.classList.add('js');
 
+const root = document.documentElement;
+const currentPage = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+
+document.querySelectorAll('.topnav a').forEach((link) => {
+  const href = (link.getAttribute('href') || '').toLowerCase();
+  if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+    link.classList.add('active');
+  }
+});
+
 const revealTargets = document.querySelectorAll(
-  '.hero-copy, .hero-art, .section-head, .card, .menu-card, .price-card, .quote-panel, .timeline, .kpi-panel, .form-panel, .footer, .feature-row, .story-line, .panel, .lab-step, .diagram-shell, .agent-shell, .atlas-card, .roadmap-item, .chat-bubble, .image-frame'
+  '.hero-copy, .hero-art, .section-head, .card, .menu-card, .quote-panel, .kpi-panel, .panel, .form-panel, .feature-row, .story-line, .atlas-card, .roadmap-item, .chat-bubble, .image-frame, .diagram-shell, .logo-card, .palette-swatch, .process-step, .slot, .summary-card, .technique-card, .data-table'
 );
 revealTargets.forEach((el) => el.classList.add('reveal'));
 
@@ -19,7 +29,6 @@ const observer = new IntersectionObserver(
 
 revealTargets.forEach((el) => observer.observe(el));
 
-const root = document.documentElement;
 window.addEventListener('pointermove', (event) => {
   const x = (event.clientX / window.innerWidth) * 100;
   const y = (event.clientY / window.innerHeight) * 100;
@@ -37,125 +46,129 @@ if (ticker && ticker.parentElement) {
   ticker.parentElement.appendChild(ticker.cloneNode(true));
 }
 
+const escapeHTML = (value = '') =>
+  String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
 const buildBubble = (role, text) => {
   const bubble = document.createElement('article');
   bubble.className = `chat-bubble ${role}`;
-  bubble.innerHTML = `<span class="chat-label">${role === 'user' ? 'You' : 'Rozalab agent'}</span><p>${text}</p>`;
+  bubble.innerHTML = `<span class="chat-label">${role === 'user' ? 'You' : 'Rozalab studio'}</span><p>${text}</p>`;
   return bubble;
 };
 
-const cleanText = (value) => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-const agentResponses = [
+const consoleResponses = [
   {
     match: ['pair', 'pairing', 'atlas', 'mango', 'lychee', 'rose'],
-    title: 'Pairing atlas',
+    title: 'Pairing system',
     summary:
-      'The best starting point is the pairing map: floral for delicate premium scoops, tropical for bright summer energy, roasted for depth, and dessert pairings for the most commercial fusion ideas.',
-    metrics: ['6', '4', '7', '1'],
+      'Rozalab should present Carino with four clear pairing lanes: floral, tropical, roasted, and dessert-led. Each lane needs a hero combination, a fallback, and one rejected idea so the client sees real judgment, not a random flavor list.',
+    metrics: ['4 lanes', '1 hero SKU', '1 rejected pair', 'sensory logic'],
     bullets: [
-      'Lychee + rosewater and mango + passionfruit are the strongest confidence pairs.',
-      'Keep black sesame + vanilla out of the core menu because the contrast is too weak.',
-      'The atlas should show why each pair feels premium, not just whether it is trendy.'
+      'Keep lychee + rosewater as the quiet premium signal.',
+      'Use mango + passionfruit when the brief needs brightness and recall.',
+      'Leave black sesame + vanilla out of the core set because the contrast is too flat.'
     ]
   },
   {
     match: ['sku', 'menu', 'flavor', 'recipe', 'yuzu', 'cheesecake'],
     title: 'SKU development',
     summary:
-      'I can turn the pairing logic into a sellable SKU: ingredients, prep method, time-to-make, and the premium positioning the client should see on the site.',
-    metrics: ['4', '18 min', '1', 'premium'],
+      'The site should make every SKU feel intentional: a name, a sensory idea, a method, and a service format. For Carino, the hero should read premium, the signature line should stay concise, and the launch menu should stay commercially narrow.',
+    metrics: ['hero SKU', 'signature line', 'short menu', 'clear method'],
     bullets: [
-      'Yuzu Cloud Cheesecake works as the hero SKU because it reads clean, bright, and expensive.',
-      'Lychee Rose Signal is the emotional / floral option for a softer premium story.',
-      'Every SKU card should show method, prep time, and service style so the client sees the development logic.'
+      'Yuzu Cloud Cheesecake is the strongest hero because it balances brightness with creaminess.',
+      'Lychee Rose Signal adds a softer emotional register to the range.',
+      'Saffron Pistachio Prime gives the brand a luxury anchor without needing heavy styling.'
     ]
   },
   {
     match: ['sop', 'ccp', 'process', 'make', 'method', 'prep', 'temperature'],
-    title: 'Production method',
+    title: 'Process discipline',
     summary:
-      'The method should be visible from base to service: sanitize, blend, pasteurize, age, flavour, churn, harden, and serve at the correct temperature.',
-    metrics: ['5', '82-85°C', '4°C', '-12 to -15°C'],
+      'The production story should be visible from first weigh-in to final hardening: sanitize, blend, pasteurize, age, flavour, churn, harden, and store. That sequence is the proof that the studio is serious.',
+    metrics: ['82–85°C', '4°C ageing', 'cold chain', 'CCP log'],
     bullets: [
-      'SOP keeps the product consistent across samples and future manufacturing.',
-      'CCPs should track temperature, holding time, sanitation, and batch integrity.',
-      'The website should make the method feel rigorous but still easy to understand.'
-    ]
-  },
-  {
-    match: ['machine', 'equipment', 'capex', 'invest', 'freezer', 'pasteurizer'],
-    title: 'Equipment stack',
-    summary:
-      'The core stack is compact: pasteurizer, batch freezer, blast freezer, dipping cabinet, scales, thermometers, and QC tools. That is enough to prototype and scale smartly.',
-    metrics: ['6', 'core', 'qc', 'capex'],
-    bullets: [
-      'Separate must-have equipment from nice-to-have expansion items.',
-      'The client should see the investment logic, not just a shopping list.',
-      'Show how the same stack supports sampling, pilot runs, and repeat production.'
+      'Temperature control is a design choice, not just a food-safety task.',
+      'The client should see where the product is protected from drift.',
+      'Every handoff needs a small checklist so the quality stays repeatable.'
     ]
   },
   {
     match: ['scale', 'qsr', 'manufacturing', 'factory', 'partner'],
     title: 'Scale path',
     summary:
-      'The story should move from sample development to pilot production to manufacturing tie-in, then finally to a QSR-ready service model without losing flavor quality.',
-    metrics: ['3', 'pilot', 'partner', 'qsr'],
+      'Rozalab needs to show how an idea moves from bench testing to pilot batches, then to a manufacturing partner or a QSR-ready service model. The story should feel strategic, not just operational.',
+    metrics: ['4 stages', 'pilot ready', 'partner handoff', 'repeatable'],
     bullets: [
-      'Each stage needs its own quality gate and handoff notes.',
-      'Manufacturing partners should receive stable recipes and a clear SOP pack.',
-      'QSR growth works only if the menu is deliberately limited and repeatable.'
+      'Sample development should be shown as a disciplined decision process.',
+      'Pilot production needs stable recipes and a visible QC routine.',
+      'QSR growth only works if the menu gets tighter, not wider.'
+    ]
+  },
+  {
+    match: ['brand', 'vision', 'logo', 'type', 'visual', 'motion'],
+    title: 'Visual system',
+    summary:
+      'The site should feel like a real studio identity: a strong wordmark, a calm layout, premium motion, and imagery that looks art-directed rather than generated. Every page should share the same visual grammar.',
+    metrics: ['wordmark', 'type', 'motion', 'system'],
+    bullets: [
+      'Use one logo language across header, footer, and section labels.',
+      'Keep the pages editorial and content-first instead of template-like.',
+      'Let the motion support the story, not compete with it.'
     ]
   },
   {
     match: [],
     title: 'Research overview',
     summary:
-      'Rozalab is a premium ice cream research studio. It should show what is being studied now, what has been approved, and what can be scaled with confidence.',
-    metrics: ['now', 'study', 'build', 'scale'],
+      'Rozalab is a premium ice cream R&D studio for Carino. The site should prove the work: pairing direction, formulation logic, process discipline, and launch readiness, all presented like a polished research desk.',
+    metrics: ['research', 'bench', 'process', 'launch'],
     bullets: [
-      'Show pairing logic, not just the final menu.',
-      'Show sample development and the reason each decision was made.',
-      'Keep the presentation premium, scientific, and easy to trust.'
+      'Make the client understand why each recommendation exists.',
+      'Keep the content specific enough to feel credible and luxurious.',
+      'Treat the website itself as a deliverable from the studio.'
     ]
   }
 ];
 
-const pickAgentResponse = (query) => {
+const pickConsoleResponse = (query) => {
   const normalized = query.toLowerCase();
-  return (
-    agentResponses.find((item) => item.match.some((term) => normalized.includes(term))) ||
-    agentResponses[agentResponses.length - 1]
-  );
+  return consoleResponses.find((item) => item.match.some((term) => normalized.includes(term))) || consoleResponses[consoleResponses.length - 1];
 };
 
-const agentConsole = document.querySelector('[data-agent-console]');
-if (agentConsole) {
-  const log = document.querySelector('[data-agent-log]');
-  const title = document.querySelector('[data-agent-title]');
-  const summary = document.querySelector('[data-agent-summary]');
-  const metric1 = document.querySelector('[data-agent-metric-1]');
-  const metric2 = document.querySelector('[data-agent-metric-2]');
-  const metric3 = document.querySelector('[data-agent-metric-3]');
-  const metric4 = document.querySelector('[data-agent-metric-4]');
-  const points = document.querySelector('[data-agent-points]');
-  const input = document.querySelector('[data-agent-input]');
-  const form = document.querySelector('[data-agent-form]');
-  const promptButtons = document.querySelectorAll('[data-agent-prompt]');
+const consoleRoot = document.querySelector('[data-lab-console]');
+if (consoleRoot) {
+  const log = document.querySelector('[data-lab-log]');
+  const title = document.querySelector('[data-lab-title]');
+  const summary = document.querySelector('[data-lab-summary]');
+  const metric1 = document.querySelector('[data-lab-metric-1]');
+  const metric2 = document.querySelector('[data-lab-metric-2]');
+  const metric3 = document.querySelector('[data-lab-metric-3]');
+  const metric4 = document.querySelector('[data-lab-metric-4]');
+  const points = document.querySelector('[data-lab-points]');
+  const input = document.querySelector('[data-lab-input]');
+  const form = document.querySelector('[data-lab-form]');
+  const promptButtons = document.querySelectorAll('[data-lab-prompt]');
 
   const renderResponse = (query) => {
-    const response = pickAgentResponse(query);
+    const response = pickConsoleResponse(query);
 
     if (log) {
       log.innerHTML = '';
-      log.appendChild(buildBubble('user', cleanText(query)));
+      log.appendChild(buildBubble('user', escapeHTML(query)));
+
       const assistant = document.createElement('article');
       assistant.className = 'chat-bubble assistant';
       assistant.innerHTML = `
-        <span class="chat-label">Rozalab agent</span>
-        <p>${cleanText(response.summary)}</p>
+        <span class="chat-label">Rozalab studio</span>
+        <p>${escapeHTML(response.summary)}</p>
         <ul class="detail-list" style="margin-top:12px;">
-          ${response.bullets.map((bullet) => `<li>${cleanText(bullet)}</li>`).join('')}
+          ${response.bullets.map((bullet) => `<li>${escapeHTML(bullet)}</li>`).join('')}
         </ul>
       `;
       log.appendChild(assistant);
@@ -168,13 +181,13 @@ if (agentConsole) {
     if (metric3) metric3.textContent = response.metrics[2] || '—';
     if (metric4) metric4.textContent = response.metrics[3] || '—';
     if (points) {
-      points.innerHTML = response.bullets.map((bullet) => `<li>${cleanText(bullet)}</li>`).join('');
+      points.innerHTML = response.bullets.map((bullet) => `<li>${escapeHTML(bullet)}</li>`).join('');
     }
   };
 
   promptButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      const query = button.getAttribute('data-agent-prompt') || '';
+      const query = button.getAttribute('data-lab-prompt') || '';
       if (input) input.value = query;
       renderResponse(query);
     });
@@ -188,7 +201,7 @@ if (agentConsole) {
     if (input) input.value = '';
   });
 
-  renderResponse('Show me the pairing map and how Rozalab should explain it to a client.');
+  renderResponse('Show the pairing logic and explain it to Carino in client-friendly language.');
 }
 
 const atlasToolbar = document.querySelector('[data-atlas-toolbar]');
@@ -219,14 +232,21 @@ const orderForm = document.querySelector('[data-order-form]');
 if (orderForm) {
   const summary = document.querySelector('[data-order-summary]');
   const fields = orderForm.querySelectorAll('input, select, textarea');
+
   const updateSummary = () => {
     if (!summary) return;
     const name = orderForm.querySelector('[name="name"]')?.value?.trim() || 'Guest';
     const flavor = orderForm.querySelector('[name="flavor"]')?.value || 'Choose a flavor';
     const occasion = orderForm.querySelector('[name="occasion"]')?.value || 'No occasion selected';
+    const pickup = orderForm.querySelector('[name="time"]')?.value || 'Pickup time pending';
     const quantity = orderForm.querySelector('[name="quantity"]')?.value || '1';
-    summary.innerHTML = `<strong>${cleanText(name)}</strong><p>${quantity} item(s) · ${cleanText(flavor)} · ${cleanText(occasion)}</p>`;
+
+    summary.innerHTML = `
+      <strong>${escapeHTML(name)}</strong>
+      <p>${escapeHTML(quantity)} item(s) · ${escapeHTML(flavor)} · ${escapeHTML(occasion)} · ${escapeHTML(pickup)}</p>
+    `;
   };
+
   fields.forEach((field) => field.addEventListener('input', updateSummary));
   orderForm.addEventListener('submit', (event) => {
     event.preventDefault();
