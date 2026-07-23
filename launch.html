@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Rozalab launch module for sample requests, consultation, and order flow." />
-    <title>Rozalab &mdash; Launch</title>
+    <meta name="description" content="Rozalab × Carino launch module for tasting requests, sample planning, and client intake." />
+    <title>Rozalab × Carino — Launch</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="site.css" />
     <script src="app.js" defer></script>
@@ -13,9 +13,9 @@
     <header class="topbar">
       <div class="brand">
         <span class="brand-mark">RL</span>
-        <div>
-          <p class="eyebrow">Rozalab</p>
-          <p class="muted">Launch and order flow</p>
+        <div class="brand-copy">
+          <strong>Rozalab × Carino</strong>
+          <p>launch and intake</p>
         </div>
       </div>
       <nav class="topnav">
@@ -23,39 +23,52 @@
         <a href="brand.html">Vision</a>
         <a href="menu.html">Pairings</a>
         <a href="operations.html">Process</a>
-        <a href="lab.html">Lab</a>
-        <a class="active" href="launch.html">Launch</a>
+        <a href="lab.html">Evidence</a>
+        <a href="launch.html">Launch</a>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <div class="hero-copy">
+        <div class="hero-copy reveal">
           <p class="tag">Client intake</p>
-          <div class="display-stack">
-            <strong>launch module</strong>
-            <h2>tell us what to prepare</h2>
-          </div>
+          <h1>Turn the studio work into a real launch request.</h1>
           <p class="lead">
-            Use this page for clean sample requests, client consultation, or a visual stand-in for the
-            final ordering and launch experience.
+            This page helps Carino or the team request samples, define the occasion, and choose the right
+            flavours without losing the premium tone of the brand.
           </p>
           <div class="hero-meta">
-            <div class="mini-stat"><strong>Pickup</strong><span>In-store or takeaway</span></div>
-            <div class="mini-stat"><strong>Best for</strong><span>Office orders, dates, and late-night desserts</span></div>
-            <div class="mini-stat"><strong>Lead time</strong><span>Pre-order or same-day pickup</span></div>
+            <div class="mini-stat"><strong>Lead time</strong><span>same-day or planned</span></div>
+            <div class="mini-stat"><strong>Best for</strong><span>briefs, tastings, and launch prep</span></div>
+            <div class="mini-stat"><strong>Outcome</strong><span>clear order summary</span></div>
+          </div>
+          <div class="chips">
+            <span>sample request</span>
+            <span>launch brief</span>
+            <span>client note</span>
+            <span>premium handoff</span>
           </div>
         </div>
-        <div class="hero-art">
-          <img src="assets/hero.svg" alt="Editorial Rozalab ice cream R&amp;D illustration" />
+        <div class="hero-art reveal">
+          <img src="assets/hero.svg" alt="Rozalab launch illustration" />
+          <div class="art-card top reveal">
+            <p><strong>Client goal</strong><br />Make the next step obvious and easy to complete.</p>
+          </div>
+          <div class="art-card reveal">
+            <p><strong>Studio promise</strong><br />A clean intake that keeps the tone as premium as the product.</p>
+          </div>
         </div>
       </section>
 
       <section class="section order-grid">
-        <div class="form-panel">
-          <div class="section-head narrow">
-            <p class="tag">Place an order</p>
-            <h2>sample and launch request</h2>
+        <div class="form-panel reveal">
+          <div class="section-head compact">
+            <p class="tag">Request a tasting</p>
+            <h2>Tell us what to prepare.</h2>
+            <p>
+              Use this form for a sample brief, an in-store tasting, a launch discussion, or a more formal
+              client request.
+            </p>
           </div>
           <form class="form-grid" data-order-form>
             <div class="field-grid">
@@ -63,10 +76,10 @@
               <input class="input" name="phone" placeholder="Phone number" />
               <select class="select" name="occasion">
                 <option value="">Occasion</option>
-                <option>Dessert run</option>
-                <option>Date night</option>
-                <option>Office treat</option>
-                <option>Gift order</option>
+                <option>Client tasting</option>
+                <option>Sample review</option>
+                <option>Launch planning</option>
+                <option>Menu discussion</option>
               </select>
               <select class="select" name="flavor">
                 <option value="">Choose a flavor</option>
@@ -87,44 +100,97 @@
               </select>
               <select class="select" name="time">
                 <option value="">Pickup time</option>
-                <option>Today 4&ndash;6 PM</option>
-                <option>Today 6&ndash;8 PM</option>
-                <option>Tonight 8&ndash;10 PM</option>
+                <option>Today 4–6 PM</option>
+                <option>Today 6–8 PM</option>
+                <option>Tonight 8–10 PM</option>
                 <option>Tomorrow</option>
               </select>
             </div>
-            <textarea class="textarea" name="notes" placeholder="Any notes &mdash; sweetness level, allergies, packing, or message card"></textarea>
+            <textarea class="textarea" name="notes" placeholder="Notes: sweetness level, serving style, allergies, pack size, or launch context."></textarea>
             <div class="form-actions">
               <button class="button primary" type="submit">Send request</button>
-              <span class="muted">We can adjust flavors, portions, or pickup timing.</span>
+              <span class="muted">We can adjust flavours, quantity, and timing to fit the brief.</span>
             </div>
           </form>
         </div>
 
-        <aside class="form-panel side-note">
-          <div class="slot" data-order-summary>
+        <aside class="form-panel reveal">
+          <div class="summary-card" data-order-summary>
             <strong>Guest</strong>
-            <p>1 item(s) &middot; Choose a flavor &middot; No occasion selected</p>
+            <p>1 item(s) · Choose a flavor · No occasion selected · Pickup time pending</p>
           </div>
           <div class="slot">
-            <h3>Best combinations</h3>
-            <p>Lychee + rosewater, saffron + pistachio, and mango + passionfruit.</p>
+            <h3>Best pairings</h3>
+            <p>Lychee + rosewater, yuzu + cheesecake, saffron + pistachio.</p>
           </div>
           <div class="slot">
-            <h3>Pricing guide</h3>
-            <p>Single scoops begin at &#8377;209, flights at &#8377;599, and premium sundaes at &#8377;449.</p>
+            <h3>What happens next</h3>
+            <p>Rozalab can review the brief, refine the flavour list, and shape the launch route.</p>
           </div>
           <div class="slot">
-            <h3>Order style</h3>
-            <p>Use this page for clean pickup requests or as a visual stand-in for a web ordering module.</p>
+            <h3>What the client gets</h3>
+            <p>A clear proposal, a premium tasting direction, and a product story that is easy to defend.</p>
           </div>
         </aside>
+      </section>
+
+      <section class="section split">
+        <div>
+          <div class="section-head compact reveal">
+            <p class="tag">Launch checklist</p>
+            <h2>What a confident handoff needs.</h2>
+            <p>
+              A launch should not feel improvised. The studio needs one final check that the menu, process,
+              and service story all still align.
+            </p>
+          </div>
+          <div class="feature-rail">
+            <div class="feature-row reveal">
+              <span class="index">01</span>
+              <strong>Confirm the hero SKU</strong>
+              <span>The product that leads the launch should be obvious to the client and the team.</span>
+              <strong>focus</strong>
+            </div>
+            <div class="feature-row reveal">
+              <span class="index">02</span>
+              <strong>Trim the menu</strong>
+              <span>Keep the line narrow enough to feel premium and operationally stable.</span>
+              <strong>discipline</strong>
+            </div>
+            <div class="feature-row reveal">
+              <span class="index">03</span>
+              <strong>Lock the process</strong>
+              <span>Review the SOP, CCP, and storage rules before the launch story goes live.</span>
+              <strong>quality</strong>
+            </div>
+            <div class="feature-row reveal">
+              <span class="index">04</span>
+              <strong>Prepare the handoff</strong>
+              <span>Make sure the client knows what happens after the first tasting.</span>
+              <strong>handoff</strong>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="quote-panel reveal">
+            <blockquote>
+              "The final step should feel easy because the studio did the hard thinking earlier."
+            </blockquote>
+            <footer>Rozalab launch principle</footer>
+          </div>
+          <div class="grid two" style="margin-top: 16px;">
+            <article class="kpi-panel reveal"><h3>Brief</h3><p>What is the client actually asking for?</p></article>
+            <article class="kpi-panel reveal"><h3>Recipe</h3><p>Which flavours should be made first?</p></article>
+            <article class="kpi-panel reveal"><h3>Method</h3><p>Which controls are non-negotiable?</p></article>
+            <article class="kpi-panel reveal"><h3>Follow-up</h3><p>What happens after the tasting request?</p></article>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>Rozalab &mdash; Launch</p>
-      <p class="muted">Clean request form and launch-ready module.</p>
+      <p>Rozalab × Carino — Launch</p>
+      <p class="muted">Clean intake, premium tone, and a clear next step for the client.</p>
     </footer>
   </body>
 </html>
