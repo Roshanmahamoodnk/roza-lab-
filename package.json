@@ -1,0 +1,14 @@
+{
+  "name": "rozalab-carino-assistant",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node assistant-server.js"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.0",
+    "@langchain/openai": "^0.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
