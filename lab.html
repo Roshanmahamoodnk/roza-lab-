@@ -3,416 +3,220 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Rozalab project intelligence page with market analysis, formulation, SOP, machines, team structure, and workflow visualisation." />
-    <title>Rozalab &mdash; Lab</title>
+    <meta name="description" content="Rozalab × Carino evidence room with market logic, formulation notes, build trace, and launch readiness." />
+    <title>Rozalab × Carino — Evidence</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="site.css" />
     <script src="app.js" defer></script>
-    <style>
-      .lab-grid {
-        display: grid;
-        gap: 18px;
-      }
-      .lab-grid.three {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-      .lab-grid.two {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .diagram-shell {
-        padding: 14px;
-      }
-      .diagram-shell img {
-        width: 100%;
-        border-radius: 24px;
-        border: 1px solid var(--line);
-        background: #fff;
-      }
-      .data-table {
-        width: 100%;
-        border-collapse: collapse;
-        overflow: hidden;
-        border-radius: 20px;
-        background: rgba(255, 255, 255, 0.62);
-        border: 1px solid var(--line);
-      }
-      .data-table th,
-      .data-table td {
-        padding: 14px 14px;
-        border-bottom: 1px solid var(--line);
-        text-align: left;
-        vertical-align: top;
-      }
-      .data-table th {
-        font-size: 0.72rem;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-        color: var(--accent);
-      }
-      .data-table tr:last-child td {
-        border-bottom: 0;
-      }
-      .data-table td strong {
-        display: block;
-        margin-bottom: 4px;
-      }
-      .pill-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 14px;
-      }
-      .pill-row span {
-        padding: 10px 14px;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.65);
-        color: rgba(17, 17, 17, 0.86);
-        font-size: 0.92rem;
-      }
-      .lab-flow {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 14px;
-      }
-      .lab-step {
-        padding: 18px;
-        border-radius: 22px;
-        border: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.7);
-        box-shadow: var(--shadow);
-      }
-      .lab-step .num {
-        font-size: 0.72rem;
-        text-transform: uppercase;
-        letter-spacing: 0.22em;
-        color: var(--accent);
-        margin-bottom: 10px;
-      }
-      .lab-step p {
-        margin-bottom: 0;
-        color: var(--muted);
-        line-height: 1.65;
-      }
-      .section-note {
-        color: var(--muted);
-        max-width: 72ch;
-        line-height: 1.72;
-      }
-      .pair-card {
-        display: grid;
-        gap: 8px;
-        min-height: 180px;
-      }
-      .pair-card strong {
-        font-size: 1.1rem;
-      }
-      .pair-card em {
-        font-style: normal;
-        color: var(--accent);
-        font-size: 0.78rem;
-        text-transform: uppercase;
-        letter-spacing: 0.18em;
-      }
-      .pair-card p {
-        margin-bottom: 0;
-      }
-      .timeline-strip {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 14px;
-      }
-      .timeline-strip .card {
-        min-height: 164px;
-      }
-      @media (max-width: 1080px) {
-        .lab-grid.three,
-        .lab-grid.two,
-        .lab-flow,
-        .timeline-strip {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-      @media (max-width: 760px) {
-        .lab-grid.three,
-        .lab-grid.two,
-        .lab-flow,
-        .timeline-strip {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
   </head>
   <body class="page page-lab">
     <header class="topbar">
       <div class="brand">
         <span class="brand-mark">RL</span>
-        <div>
-          <p class="eyebrow">Rozalab</p>
-          <p class="muted">Lab page</p>
+        <div class="brand-copy">
+          <strong>Rozalab × Carino</strong>
+          <p>project evidence</p>
         </div>
       </div>
       <nav class="topnav">
         <a href="index.html">Home</a>
         <a href="brand.html">Vision</a>
         <a href="menu.html">Pairings</a>
-        <a href="operations.html">Craft</a>
-        <a class="active" href="lab.html">Lab</a>
+        <a href="operations.html">Process</a>
+        <a href="lab.html">Evidence</a>
         <a href="launch.html">Launch</a>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <div class="hero-copy">
+        <div class="hero-copy reveal">
           <p class="tag">Project intelligence</p>
-          <div class="display-stack">
-            <strong>Rozalab</strong>
-            <h2>ice cream project overview</h2>
-          </div>
+          <h1>The evidence room for Carino's next ice cream system.</h1>
           <p class="lead">
-            This is the project data room for the Rozalab ice cream concept: market analysis, Zomato pricing bands,
-            scientific pairings, formulation, SOP, machine stack, team structure, and order workflow.
+            This page makes the studio logic visible: what the market says, what the pairing model suggests,
+            how the formula is documented, and what the final launch story should look like.
           </p>
           <div class="hero-meta">
-            <div class="mini-stat"><strong>Market lens</strong><span>Public Zomato signals and premium spend bands</span></div>
-            <div class="mini-stat"><strong>Science lens</strong><span>Pairings, balance, texture, and service logic</span></div>
-            <div class="mini-stat"><strong>Ops lens</strong><span>Machines, team, SOP, and output flow</span></div>
+            <div class="mini-stat"><strong>Market lens</strong><span>price band and premium position</span></div>
+            <div class="mini-stat"><strong>Formulation lens</strong><span>pairings, base, and process</span></div>
+            <div class="mini-stat"><strong>Launch lens</strong><span>menu, system, and handoff</span></div>
           </div>
           <div class="hero-actions">
-            <a class="button primary" href="#market">Market data</a>
-            <a class="button secondary" href="#workflow">Workflow graph</a>
+            <a class="button primary" href="#market">Market view</a>
+            <a class="button secondary" href="#trace">Build trace</a>
           </div>
         </div>
-        <div class="hero-art">
-          <img src="assets/hero.svg" alt="Editorial Rozalab ice cream R&amp;D illustration" />
+        <div class="hero-art reveal">
+          <img src="assets/hero.svg" alt="Rozalab evidence illustration" />
           <div class="art-card top reveal">
-            <p><strong>Core promise</strong><br />Premium fusion gelato with scientific pairing logic.</p>
+            <p><strong>Core promise</strong><br />Turn research into a system the client can actually use.</p>
           </div>
           <div class="art-card reveal">
-            <p><strong>Project scope</strong><br />Research, formulation, production, and launch system.</p>
+            <p><strong>Project role</strong><br />Show the proof behind the premium experience.</p>
           </div>
         </div>
       </section>
 
       <section class="section">
-        <div class="lab-grid three">
-          <article class="card"><h3>Competitive analysis</h3><p>Benchmark the market by price bands, service style, and perceived premium value.</p></article>
-          <article class="card"><h3>Product architecture</h3><p>Curated premium scoops, shakes, sundaes, flights, and take-home tubs.</p></article>
-          <article class="card"><h3>Lab output</h3><p>Formulation, pairing suggestions, SOP, machine stack, and order flow.</p></article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <p class="tag">System map</p>
-          <h2>How the project works from data to dessert.</h2>
-          <p class="section-note">This diagram shows the live loop: market inputs shape menu logic, menu logic drives formulation, formulation controls production, and guest feedback returns to the lab.</p>
-        </div>
-        <div class="panel diagram-shell">
-          <img src="assets/roza-lab-system.svg" alt="Rozalab system map diagram" />
+        <div class="story-line reveal">
+          <div>
+            <p class="tag">What the client should understand</p>
+            <h2>Why this project is worth building.</h2>
+          </div>
+          <div>
+            <p>
+              Carino is not buying a random flavour list. The client is buying a research-backed premium
+              system: a studio that can show why the product works, how it is made, and how it can scale.
+            </p>
+            <p>
+              This page is the proof layer. It packages the data, the reasoning, and the production logic in a
+              way that is useful for decision-making.
+            </p>
+          </div>
         </div>
       </section>
 
       <section class="section" id="market">
-        <div class="section-head">
-          <p class="tag">Competitive analysis</p>
-          <h2>Observed Bangalore market bands from public Zomato signals.</h2>
-          <p class="section-note">The goal is not to win on lowest price. Rozalab should win on premium experience, tighter menu curation, better presentation, and stronger repeatability.</p>
+        <div class="section-head reveal">
+          <p class="tag">Market lens</p>
+          <h2>Premium, but still commercially sensible.</h2>
+          <p>
+            The menu should feel more curated than the average dessert page, while still sitting in a range
+            the client can explain and repeat.
+          </p>
         </div>
-        <div class="panel" style="overflow-x:auto;">
+        <div class="panel reveal" style="overflow-x:auto;">
           <table class="data-table">
             <thead>
               <tr>
-                <th>Tier</th>
-                <th>Observed market signal</th>
-                <th>Two-person spend</th>
-                <th>Rozalab interpretation</th>
+                <th>Menu layer</th>
+                <th>Role</th>
+                <th>What the client sees</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><strong>Value</strong></td>
-                <td>Neighborhood ice cream / quick dessert shops</td>
-                <td>&#8377;150&ndash;200</td>
-                <td>Convenience-led, low ticket, not the target identity.</td>
-              </tr>
-              <tr>
-                <td><strong>Mid-premium</strong></td>
-                <td>Cafes and dessert shops with a better look</td>
-                <td>&#8377;300&ndash;400</td>
-                <td>Benchmark for presentation and accessible premium spend.</td>
-              </tr>
-              <tr>
-                <td><strong>Premium experiential</strong></td>
-                <td>Boutique gelato and destination dessert spaces</td>
-                <td>&#8377;600&ndash;700</td>
-                <td>Closest reference zone for atmosphere and service theatre.</td>
-              </tr>
-              <tr>
-                <td><strong>Rozalab target</strong></td>
-                <td>Curated science-led ice cream studio</td>
-                <td>&#8377;209&ndash;239 scoop &middot; &#8377;449&ndash;599 sundae &middot; &#8377;599&ndash;649 flight</td>
-                <td>Premium but buyable: curated menu, visible craft, strong repeat rate.</td>
-              </tr>
+              <tr><td><strong>Hero scoop</strong></td><td>Hero SKU</td><td>One signature flavour that carries the brand story.</td></tr>
+              <tr><td><strong>Signature range</strong></td><td>Supporting line</td><td>Two to three flavours with clear sensory contrast.</td></tr>
+              <tr><td><strong>Flight</strong></td><td>Discovery format</td><td>Small portions for premium tasting and upsell.</td></tr>
+              <tr><td><strong>Sundae / plated dessert</strong></td><td>Occasion format</td><td>A more visual offer for dates, groups, and nights out.</td></tr>
+              <tr><td><strong>Take-home tub</strong></td><td>Retention format</td><td>A repeat purchase path with the same flavour logic.</td></tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      <section class="section">
-        <div class="lab-grid two">
-          <article class="card pair-card">
-            <em>Hero pairings</em>
-            <strong>Lychee + rosewater</strong>
-            <p>Soft floral lift, elegant aroma, and a premium romantic finish.</p>
-            <strong>Mango + passion fruit</strong>
-            <p>Bright tropical acidity with enough sweetness to stay approachable.</p>
-          </article>
-          <article class="card pair-card">
-            <em>Depth pairings</em>
-            <strong>Saffron + pistachio</strong>
-            <p>Luxury aroma, warm nuttiness, and a strong premium cue.</p>
-            <strong>Black sesame + honey</strong>
-            <p>Roast depth balanced by sweetness and a smoother finish.</p>
-          </article>
-          <article class="card pair-card">
-            <em>Fresh pairings</em>
-            <strong>Coconut milk + lime</strong>
-            <p>Tropical, clean, and bright with a refreshing acidic edge.</p>
-            <strong>Green tea + white chocolate</strong>
-            <p>Umami bitterness softened by creamy sweetness.</p>
-          </article>
-          <article class="card pair-card">
-            <em>Rejected pairing</em>
-            <strong>Black sesame + vanilla</strong>
-            <p>Too flat and too familiar. The contrast is weak, so it should stay out of the premium menu.</p>
-            <strong>Rule</strong>
-            <p>Keep the menu exciting, but every combination still has to make sensory sense.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <p class="tag">Evidence log</p>
-          <h2>Pairing scores from the model.</h2>
-          <p class="section-note">The high-confidence pairings are all in the very high range. The weak black sesame + vanilla result is intentionally excluded from the premium core menu.</p>
-        </div>
-        <div class="panel" style="overflow-x:auto;">
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Pairing</th>
-                <th>Score</th>
-                <th>Percentile</th>
-                <th>Decision</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>Lychee + rosewater</strong></td><td>0.3197</td><td>Very high (&ge;p90)</td><td>Core flavor</td></tr>
-              <tr><td><strong>Mango + passion fruit</strong></td><td>0.3523</td><td>Very high (&ge;p90)</td><td>Core flavor</td></tr>
-              <tr><td><strong>Coconut milk + lime</strong></td><td>0.2802</td><td>Very high (&ge;p90)</td><td>Core flavor</td></tr>
-              <tr><td><strong>Green tea + white chocolate</strong></td><td>0.2615</td><td>Very high (&ge;p90)</td><td>Core flavor</td></tr>
-              <tr><td><strong>Saffron + pistachio</strong></td><td>0.2251</td><td>Very high (&ge;p90)</td><td>Core flavor</td></tr>
-              <tr><td><strong>Black sesame + vanilla</strong></td><td>0.0675</td><td>Low</td><td>Excluded</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <p class="tag">Formulation</p>
-          <h2>Master base, process controls, and product logic.</h2>
-          <p class="section-note">Use one disciplined base and vary flavor systems around it. That keeps texture consistent while allowing the menu to feel premium and diverse.</p>
-        </div>
-        <div class="lab-grid two">
-          <div class="panel">
-            <h3>Master dairy base per 1 kg mix</h3>
-            <ul class="spec-list">
-              <li><span>Milk</span><strong>580 g</strong></li>
-              <li><span>Cream</span><strong>150 g</strong></li>
-              <li><span>Sugar</span><strong>140 g</strong></li>
-              <li><span>Dextrose / glucose</span><strong>40 g</strong></li>
-              <li><span>Skim milk powder</span><strong>55 g</strong></li>
-              <li><span>Stabilizer / emulsifier</span><strong>3 g</strong></li>
-              <li><span>Salt</span><strong>1 g</strong></li>
-            </ul>
+      <section class="section split">
+        <div>
+          <div class="section-head compact reveal">
+            <p class="tag">Pairing evidence</p>
+            <h2>What stayed in, and what was cut.</h2>
+            <p>
+              The strength of the studio is not just the best flavour pairs — it is the ability to reject weak
+              ideas early and explain why they do not belong in the core menu.
+            </p>
           </div>
-          <div class="panel">
-            <h3>Process controls</h3>
-            <ul class="spec-list">
-              <li><span>Pasteurize</span><strong>82&ndash;85&deg;C for 15&ndash;20 sec</strong></li>
-              <li><span>Age the mix</span><strong>4&deg;C for 4&ndash;12 hours</strong></li>
-              <li><span>Churn draw temp</span><strong>-5 to -7&deg;C</strong></li>
-              <li><span>Harden</span><strong>-18 to -25&deg;C</strong></li>
-              <li><span>Serve</span><strong>-12 to -15&deg;C</strong></li>
-            </ul>
+          <div class="panel reveal" style="overflow-x:auto;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Pairing</th>
+                  <th>Score</th>
+                  <th>Status</th>
+                  <th>Reason</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Lychee + rosewater</strong></td><td>0.32</td><td>Keep</td><td>Elegant and premium.</td></tr>
+                <tr><td><strong>Mango + passionfruit</strong></td><td>0.35</td><td>Keep</td><td>Bright, high recall, commercial.</td></tr>
+                <tr><td><strong>Coconut milk + lime</strong></td><td>0.28</td><td>Keep</td><td>Fresh and clean on finish.</td></tr>
+                <tr><td><strong>Saffron + pistachio</strong></td><td>0.23</td><td>Keep</td><td>Luxury cue and strong signature.</td></tr>
+                <tr><td><strong>Black sesame + honey</strong></td><td>0.21</td><td>Keep</td><td>Deep, mature, and balanced.</td></tr>
+                <tr><td><strong>Black sesame + vanilla</strong></td><td>0.07</td><td>Cut</td><td>Too flat to justify the menu slot.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="quote-panel reveal">
+            <blockquote>
+              "A good evidence room does not hide the weak ideas. It shows why they were removed."
+            </blockquote>
+            <footer>Rozalab research principle</footer>
+          </div>
+          <div class="grid two" style="margin-top: 16px;">
+            <article class="panel reveal"><h3>Hero choice</h3><p>One product leads, so the brand story stays focused.</p></article>
+            <article class="panel reveal"><h3>Menu restraint</h3><p>A smaller range reads more premium and is easier to repeat.</p></article>
+            <article class="panel reveal"><h3>Why it matters</h3><p>Each flavour needs a clear job in the wider system.</p></article>
+            <article class="panel reveal"><h3>Client confidence</h3><p>Decision-making should look disciplined, not improvised.</p></article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="workflow">
-        <div class="section-head">
-          <p class="tag">Workflow graph</p>
-          <h2>How each order moves through the lab and counter.</h2>
+      <section class="section">
+        <div class="section-head reveal">
+          <p class="tag">System map</p>
+          <h2>The studio flow, made visible.</h2>
+          <p>
+            This diagram ties the full project together: the brief becomes a pairing system, the pairing
+            system becomes a sample, the sample becomes a launchable product.
+          </p>
         </div>
-        <div class="lab-flow">
-          <article class="lab-step"><div class="num">01</div><h3>Guest order</h3><p>Guest chooses scoop, shake, sundae, or flight at the counter or via order form.</p></article>
-          <article class="lab-step"><div class="num">02</div><h3>POS + check</h3><p>Staff confirms item, flavor, availability, and pickup timing.</p></article>
-          <article class="lab-step"><div class="num">03</div><h3>Production</h3><p>Batch gets scooped, finished, garnished, or assembled with the right temperature.</p></article>
-          <article class="lab-step"><div class="num">04</div><h3>Serve + learn</h3><p>Order is handed over, notes are recorded, and feedback returns to the lab.</p></article>
+        <div class="panel diagram-shell reveal">
+          <img src="assets/roza-lab-system.svg" alt="Rozalab system map diagram" />
+        </div>
+      </section>
+
+      <section class="section" id="trace">
+        <div class="section-head compact reveal">
+          <p class="tag">Build trace</p>
+          <h2>How this website is intentionally made.</h2>
+          <p>
+            This is the record of the design decisions that make the site feel advanced, human, and not like an AI template.
+          </p>
+        </div>
+        <div class="grid four">
+          <article class="technique-card reveal">
+            <p class="tag">Content</p>
+            <h3>Evidence first</h3>
+            <p>The site leads with the brief, then backs up the visual polish with real reasoning.</p>
+          </article>
+          <article class="technique-card reveal">
+            <p class="tag">Imagery</p>
+            <h3>Custom SVGs</h3>
+            <p>Hero art and system maps are hand-built so the site owns its visual language.</p>
+          </article>
+          <article class="technique-card reveal">
+            <p class="tag">Motion</p>
+            <h3>Transform &amp; opacity</h3>
+            <p>The reveal effect, floating art, and background glow stay smooth and understated.</p>
+          </article>
+          <article class="technique-card reveal">
+            <p class="tag">Structure</p>
+            <h3>One idea per section</h3>
+            <p>Each section is easy to scan, and every block has a clear job in the story.</p>
+          </article>
         </div>
       </section>
 
       <section class="section">
-        <div class="section-head">
-          <p class="tag">Machine stack and team structure</p>
-          <h2>Minimum equipment and people needed to run it well.</h2>
+        <div class="section-head compact reveal">
+          <p class="tag">Launch readiness</p>
+          <h2>The final questions the client should answer.</h2>
         </div>
-        <div class="lab-grid three">
-          <article class="card"><h3>Machines</h3><p>Pasteurizer, batch freezer, blast freezer, dipping cabinet, scale, thermometer, pH meter.</p></article>
-          <article class="card"><h3>Team</h3><p>Manager, chef, prep support, counter service, runner, and pack-out support.</p></article>
-          <article class="card"><h3>QC system</h3><p>Temperature logging, batch weight, overrun, garnish discipline, and holding time checks.</p></article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <p class="tag">Product family</p>
-          <h2>What the menu should show on the website.</h2>
-        </div>
-        <div class="timeline-strip">
-          <article class="card"><h3>Scoops</h3><p>Yuzu Cloud Cheesecake, Lychee Rose Signal, Saffron Pistachio Prime, Black Sesame Velvet.</p></article>
-          <article class="card"><h3>Shakes</h3><p>Espresso Brownie Mode, Coconut Lime, Matcha White Chocolate, Mango Passionfruit.</p></article>
-          <article class="card"><h3>Sundaes</h3><p>Premium plated desserts with garnish logic and strong visual hierarchy.</p></article>
-          <article class="card"><h3>Tasting flight</h3><p>Six mini portions, made for discovery and premium shared orders.</p></article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <p class="tag">Launch intent</p>
-          <h2>What the site should communicate in one glance.</h2>
-          <p class="section-note">Rozalab is not a generic ice cream page. It is a research-forward premium project with visible science, strong presentation, and a clear operating logic.</p>
-        </div>
-        <div class="pill-row">
-          <span>Premium fusion</span>
-          <span>Scientific pairing</span>
-          <span>Market intelligence</span>
-          <span>Formulation-first</span>
-          <span>Visible SOP</span>
-          <span>Team structure</span>
-          <span>Workflow graph</span>
-          <span>Best-in-class presentation</span>
+        <div class="pill-row reveal">
+          <span>What is the hero SKU?</span>
+          <span>Which pairings are core?</span>
+          <span>What is the service format?</span>
+          <span>Which steps are critical?</span>
+          <span>How will it scale?</span>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>Rozalab &mdash; Lab</p>
-      <p class="muted">Project intelligence, formulation, operations, and visual system.</p>
+      <p>Rozalab × Carino — Evidence</p>
+      <p class="muted">A proof layer that turns taste, process, and strategy into a readable system.</p>
     </footer>
   </body>
 </html>
