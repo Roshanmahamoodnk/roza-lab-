@@ -1,0 +1,225 @@
+:root {
+  --site-accent: #8c6237;
+  --site-accent-2: #c96f83;
+  --site-accent-3: #2f7c74;
+}
+
+.hero { gap: 30px; }
+
+.hero-copy h1 {
+  max-width: 11ch;
+}
+
+.agent-shell {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.agent-form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.agent-form .input {
+  flex: 1 1 280px;
+}
+
+.prompt-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.prompt-grid .button {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.agent-log {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.chat-bubble {
+  position: relative;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.chat-bubble.assistant {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.chat-bubble.user {
+  margin-left: auto;
+  background: rgba(155, 108, 61, 0.09);
+}
+
+.chat-bubble p {
+  margin-bottom: 0;
+  line-height: 1.65;
+}
+
+.chat-label {
+  display: block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  color: var(--accent);
+}
+
+.agent-output {
+  padding: 6px;
+}
+
+.agent-output .grid.two {
+  gap: 12px;
+}
+
+.detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.detail-list li {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.image-frame {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow);
+}
+
+.image-frame img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+}
+
+.atlas-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0 18px;
+}
+
+.atlas-toolbar .button.secondary.active {
+  background: rgba(17, 17, 17, 0.08);
+  border-color: var(--line-strong);
+}
+
+.atlas-card {
+  min-height: 190px;
+}
+
+.atlas-card.is-hidden {
+  display: none;
+}
+
+.atlas-card .tag {
+  color: var(--site-accent);
+}
+
+.roadmap-grid {
+  align-items: stretch;
+}
+
+.roadmap-item {
+  min-height: 170px;
+}
+
+.roadmap-item h3 {
+  margin-bottom: 10px;
+}
+
+.roadmap-item p {
+  margin-bottom: 0;
+}
+
+.media-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.media-card img {
+  width: 100%;
+  display: block;
+}
+
+.machine-grid {
+  gap: 16px;
+}
+
+.machine-grid .card,
+.machine-grid .panel,
+.machine-grid .kpi-panel {
+  min-height: 100%;
+}
+
+.client-note {
+  display: grid;
+  gap: 10px;
+}
+
+.client-note strong {
+  font-size: 1rem;
+}
+
+.client-note p {
+  margin-bottom: 0;
+}
+
+.footer .muted {
+  max-width: 56ch;
+}
+
+@media (max-width: 960px) {
+  .agent-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .prompt-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .agent-form {
+    flex-direction: column;
+  }
+
+  .agent-form .input {
+    flex-basis: 100%;
+  }
+
+  .atlas-toolbar {
+    gap: 8px;
+  }
+
+  .atlas-toolbar .button,
+  .prompt-grid .button {
+    width: 100%;
+  }
+}
