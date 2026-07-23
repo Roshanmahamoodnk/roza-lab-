@@ -1,22 +1,23 @@
-# Roza Lab R&D
+# Rozalab
 
-Premium ice cream research studio for Project One · Carino study.
+Premium ice cream R&amp;D studio for pairings, sample development, SOP, CCP, equipment planning, and scalable dessert systems.
 
 ## Site structure
 
-- `index.html` — home
-- `brand.html` — identity and positioning
-- `menu.html` — menu and pricing
-- `operations.html` — SOP, equipment, staffing
-- `lab.html` — project data room
-- `launch.html` — launch plan and order module
+- `index.html` &mdash; home and agent studio
+- `brand.html` &mdash; brand vision and visual system
+- `menu.html` &mdash; pairing atlas and SKU direction
+- `operations.html` &mdash; SOP, CCP, equipment, and team
+- `lab.html` &mdash; project intelligence and evidence room
+- `launch.html` &mdash; sample requests and launch flow
 
 ## Focus
 
-- Premium visual identity
-- Science-led ice cream menu study
-- Bangalore market positioning
-- Competitive analysis and pricing bands
-- Production and service SOP
-- Team structure and workflow graph
-- Motion-led, editorial-style presentation
+- Premium fusion ice cream positioning
+- Ingredient pairing logic and rejected pairs
+- Sample development and SKU naming
+- Process, sanitation, and critical control points
+- Machine stack and investment planning
+- Manufacturing handoff and QSR scaling
+- Agent-style chat workspace for client-facing explanations
+- Editorial visual presentation with clear hierarchy and motion
