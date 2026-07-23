@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Rozalab pairing atlas, SKU ideas, and flavor library for premium fusion ice cream." />
-    <title>Rozalab &mdash; Pairings</title>
+    <meta name="description" content="Rozalab × Carino pairing atlas and flavour system for premium ice cream R&D." />
+    <title>Rozalab × Carino — Pairings</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="site.css" />
     <script src="app.js" defer></script>
@@ -13,112 +13,236 @@
     <header class="topbar">
       <div class="brand">
         <span class="brand-mark">RL</span>
-        <div>
-          <p class="eyebrow">Rozalab</p>
-          <p class="muted">Pairing atlas</p>
+        <div class="brand-copy">
+          <strong>Rozalab × Carino</strong>
+          <p>pairing atlas</p>
         </div>
       </div>
       <nav class="topnav">
         <a href="index.html">Home</a>
         <a href="brand.html">Vision</a>
-        <a class="active" href="menu.html">Pairings</a>
+        <a href="menu.html">Pairings</a>
         <a href="operations.html">Process</a>
-        <a href="lab.html">Lab</a>
+        <a href="lab.html">Evidence</a>
         <a href="launch.html">Launch</a>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <div class="hero-copy">
-          <p class="tag">Pairing library</p>
-          <div class="display-stack">
-            <strong>ingredient logic</strong>
-            <h2>the flavor of discovery</h2>
-          </div>
+        <div class="hero-copy reveal">
+          <p class="tag">Pairing system</p>
+          <h1>Flavours that read as intentional, not random.</h1>
           <p class="lead">
-            This page should show the client the live pairing logic behind the menu: what works, what is
-            rejected, and how each idea becomes a premium SKU.
+            The pairing atlas should show Carino how Rozalab decides: what belongs, what is still too flat,
+            and where a flavour combination becomes premium enough to anchor the menu.
           </p>
           <div class="hero-meta">
-            <div class="mini-stat"><strong>Best pairs</strong><span>lychee + rosewater, mango + passionfruit, saffron + pistachio</span></div>
-            <div class="mini-stat"><strong>Rejected pairs</strong><span>black sesame + vanilla, any flat or low-contrast mix</span></div>
-            <div class="mini-stat"><strong>Output</strong><span>SKU, method, prep time, and service style</span></div>
+            <div class="mini-stat"><strong>Floral lane</strong><span>light, expressive, elegant</span></div>
+            <div class="mini-stat"><strong>Tropical lane</strong><span>bright, direct, high recall</span></div>
+            <div class="mini-stat"><strong>Roasted lane</strong><span>deeper, slower, more mature</span></div>
+          </div>
+          <div class="chips">
+            <span>score</span>
+            <span>reject</span>
+            <span>reason</span>
+            <span>premium signal</span>
           </div>
         </div>
-        <div class="hero-art">
-          <img src="assets/hero.svg" alt="Rozalab editorial ice cream R&amp;D illustration" />
+        <div class="hero-art reveal">
+          <img src="assets/hero.svg" alt="Rozalab pairing illustration" />
+          <div class="art-card top reveal">
+            <p><strong>Decision rule</strong><br />Every flavour needs contrast, balance, and a premium cue.</p>
+          </div>
+          <div class="art-card reveal">
+            <p><strong>Outcome</strong><br />A menu Carino can explain in one sentence per flavour.</p>
+          </div>
         </div>
       </section>
 
       <section class="section">
-        <div class="feature-rail">
-          <div class="feature-row">
-            <span class="index">01</span>
-            <strong>Lychee + rosewater</strong>
-            <span>Soft floral, high recall, and a clear premium cue.</span>
-            <strong>0.32</strong>
-          </div>
-          <div class="feature-row">
-            <span class="index">02</span>
-            <strong>Mango + passionfruit</strong>
-            <span>Bright tropical contrast with strong shelf appeal.</span>
-            <strong>0.35</strong>
-          </div>
-          <div class="feature-row">
-            <span class="index">03</span>
-            <strong>Coconut milk + lime</strong>
-            <span>Fresh, balanced, and clean on finish.</span>
-            <strong>0.28</strong>
-          </div>
-          <div class="feature-row">
-            <span class="index">04</span>
-            <strong>Saffron + pistachio</strong>
-            <span>Luxury aroma and a refined, premium story.</span>
-            <strong>0.23</strong>
-          </div>
-          <div class="feature-row">
-            <span class="index">05</span>
-            <strong>Black sesame + honey</strong>
-            <span>Roasted depth with sweet balance.</span>
-            <strong>0.21</strong>
-          </div>
+        <div class="section-head reveal">
+          <p class="tag">Interactive atlas</p>
+          <h2>Ranked pairings, grouped by sensory lane.</h2>
+          <p>
+            Use the filters to see how the menu sorts itself. The goal is not simply to list flavours,
+            but to show the client why each pairing earned a place.
+          </p>
+        </div>
+
+        <div class="filter-bar atlas-toolbar reveal" data-atlas-toolbar>
+          <button type="button" class="button secondary active" data-atlas-filter="all">All clusters</button>
+          <button type="button" class="button secondary" data-atlas-filter="floral">Floral</button>
+          <button type="button" class="button secondary" data-atlas-filter="tropical">Tropical</button>
+          <button type="button" class="button secondary" data-atlas-filter="roasted">Roasted</button>
+          <button type="button" class="button secondary" data-atlas-filter="dessert">Dessert</button>
+        </div>
+
+        <div class="grid four atlas-grid">
+          <article class="atlas-card reveal" data-cluster="floral">
+            <p class="tag">Floral · score 0.32</p>
+            <h3>Lychee + rosewater</h3>
+            <p>Elegant, soft, and high recall. Best when the brand needs a quiet premium signal.</p>
+            <p class="score">Hero pairing</p>
+          </article>
+          <article class="atlas-card reveal" data-cluster="tropical">
+            <p class="tag">Tropical · score 0.35</p>
+            <h3>Mango + passionfruit</h3>
+            <p>Bright acidity, strong sweetness, and immediate shelf appeal.</p>
+            <p class="score">Core pairing</p>
+          </article>
+          <article class="atlas-card reveal" data-cluster="tropical">
+            <p class="tag">Fresh · score 0.28</p>
+            <h3>Coconut milk + lime</h3>
+            <p>Clean, sharp, and refreshing. A strong summer profile with a polished finish.</p>
+            <p class="score">Fresh lane</p>
+          </article>
+          <article class="atlas-card reveal" data-cluster="roasted">
+            <p class="tag">Luxury · score 0.23</p>
+            <h3>Saffron + pistachio</h3>
+            <p>Warm, rich, and unmistakably premium. Ideal for signature positioning.</p>
+            <p class="score">Luxury lane</p>
+          </article>
+          <article class="atlas-card reveal" data-cluster="roasted">
+            <p class="tag">Depth · score 0.21</p>
+            <h3>Black sesame + honey</h3>
+            <p>Roast depth with a softer sweetness. Mature and deliberate rather than loud.</p>
+            <p class="score">Depth lane</p>
+          </article>
+          <article class="atlas-card reveal" data-cluster="dessert">
+            <p class="tag">Dessert · score 0.34</p>
+            <h3>Yuzu + cheesecake</h3>
+            <p>Bright citrus lifted by cream cheese richness. Strong for premium fusion gelato.</p>
+            <p class="score">Hero SKU</p>
+          </article>
+          <article class="atlas-card reveal" data-cluster="dessert">
+            <p class="tag">Dessert · score 0.30</p>
+            <h3>Espresso + brownie</h3>
+            <p>Bitter-sweet, bold, and built for dense texture and evening service.</p>
+            <p class="score">Night lane</p>
+          </article>
+          <article class="atlas-card reveal" data-cluster="dessert">
+            <p class="tag">Rejected</p>
+            <h3>Black sesame + vanilla</h3>
+            <p>Too flat. The contrast is too weak, so it stays out of the premium core menu.</p>
+            <p class="score">Exclude</p>
+          </article>
         </div>
       </section>
 
       <section class="section split">
         <div>
-          <div class="section-head narrow">
-            <p class="tag">SKU candidates</p>
-            <h2>the flavors worth building</h2>
+          <div class="section-head compact reveal">
+            <p class="tag">Why these pairings work</p>
+            <h2>Each one has a job.</h2>
+            <p>
+              The line should contain a hero flavour, a supporting flavour, and a clear sensory reason.
+              That makes the menu easier to trust and easier to sell.
+            </p>
           </div>
           <div class="grid two">
-            <article class="menu-card"><h3>Yuzu Cloud Cheesecake</h3><p class="note">Citrus brightness, cream cheese ripple, and a polished finish.</p><div class="bar"></div><div class="meta"><span>prep 18 min</span><strong>hero SKU</strong></div></article>
-            <article class="menu-card"><h3>Lychee Rose Signal</h3><p class="note">Elegant floral profile with a premium, soft aroma.</p><div class="bar"></div><div class="meta"><span>prep 15 min</span><strong>signature</strong></div></article>
-            <article class="menu-card"><h3>Saffron Pistachio Prime</h3><p class="note">Warm, rich, and unmistakably premium.</p><div class="bar"></div><div class="meta"><span>prep 22 min</span><strong>premium</strong></div></article>
-            <article class="menu-card"><h3>Black Sesame Velvet</h3><p class="note">Roasted depth and a mature dessert tone.</p><div class="bar"></div><div class="meta"><span>prep 20 min</span><strong>depth</strong></div></article>
+            <article class="panel reveal">
+              <h3>Balance</h3>
+              <p>Acid needs fat, perfume needs structure, and sweetness needs enough contrast to stay interesting.</p>
+            </article>
+            <article class="panel reveal">
+              <h3>Clarity</h3>
+              <p>If the flavour story takes too long to explain, it probably needs to be simplified.</p>
+            </article>
+            <article class="panel reveal">
+              <h3>Premium signal</h3>
+              <p>Luxury should come from precision, texture, and restraint — not just a long ingredient list.</p>
+            </article>
+            <article class="panel reveal">
+              <h3>Commercial sense</h3>
+              <p>The menu should stay narrow enough to repeat and wide enough to feel like a complete offer.</p>
+            </article>
           </div>
         </div>
         <div>
-          <div class="quote-panel">
+          <div class="quote-panel reveal">
             <blockquote>
-              "A menu should feel curated enough to trust and small enough to remember."
+              "A good pairing atlas does not just show the best flavours. It shows why the weaker ideas were rejected."
             </blockquote>
-            <footer>Rozalab pairing note</footer>
+            <footer>Rozalab pairing rule</footer>
           </div>
-          <div class="grid two" style="margin-top:16px;">
-            <article class="kpi-panel"><h3>Single</h3><p>&#8377;209&ndash;239</p></article>
-            <article class="kpi-panel"><h3>Flight</h3><p>&#8377;599&ndash;649</p></article>
-            <article class="kpi-panel"><h3>Sundae</h3><p>&#8377;449&ndash;599</p></article>
-            <article class="kpi-panel"><h3>Shake</h3><p>&#8377;319&ndash;349</p></article>
+          <div class="grid two" style="margin-top: 16px;">
+            <article class="kpi-panel reveal"><h3>Hero</h3><p>Use one pairing as the anchor.</p></article>
+            <article class="kpi-panel reveal"><h3>Support</h3><p>Keep the other flavours in service of the story.</p></article>
+            <article class="kpi-panel reveal"><h3>Reject</h3><p>Remove flat combinations before they reach the client.</p></article>
+            <article class="kpi-panel reveal"><h3>Repeat</h3><p>Let the same rule shape the whole range.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head reveal">
+          <p class="tag">Pairing evidence</p>
+          <h2>What the studio would document.</h2>
+          <p>
+            This table turns the flavours into a readable decision log, so Carino can see the difference
+            between a trendy idea and a truly useful one.
+          </p>
+        </div>
+        <div class="panel reveal" style="overflow-x:auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Pairing</th>
+                <th>Score</th>
+                <th>Role</th>
+                <th>Decision</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Lychee + rosewater</strong></td><td>0.32</td><td>Floral anchor</td><td>Core flavour</td></tr>
+              <tr><td><strong>Mango + passionfruit</strong></td><td>0.35</td><td>Tropical anchor</td><td>Core flavour</td></tr>
+              <tr><td><strong>Coconut milk + lime</strong></td><td>0.28</td><td>Fresh lane</td><td>Core flavour</td></tr>
+              <tr><td><strong>Saffron + pistachio</strong></td><td>0.23</td><td>Luxury lane</td><td>Signature flavour</td></tr>
+              <tr><td><strong>Black sesame + honey</strong></td><td>0.21</td><td>Depth lane</td><td>Secondary flavour</td></tr>
+              <tr><td><strong>Black sesame + vanilla</strong></td><td>0.07</td><td>Rejected</td><td>Exclude</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head compact reveal">
+          <p class="tag">Sensory rules</p>
+          <h2>The menu should stay disciplined.</h2>
+        </div>
+        <div class="feature-rail">
+          <div class="feature-row reveal">
+            <span class="index">01</span>
+            <strong>Start with contrast</strong>
+            <span>Give the flavour a reason to exist beyond sweetness alone.</span>
+            <strong>acid / fat</strong>
+          </div>
+          <div class="feature-row reveal">
+            <span class="index">02</span>
+            <strong>Keep one premium note</strong>
+            <span>Saffron, rosewater, pistachio, or yuzu gives the studio a refined signature.</span>
+            <strong>signal</strong>
+          </div>
+          <div class="feature-row reveal">
+            <span class="index">03</span>
+            <strong>Protect the finish</strong>
+            <span>The aftertaste must stay clean, not muddy or overly sweet.</span>
+            <strong>finish</strong>
+          </div>
+          <div class="feature-row reveal">
+            <span class="index">04</span>
+            <strong>Trim the menu</strong>
+            <span>The best premium experience is usually more curated, not wider.</span>
+            <strong>discipline</strong>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>Rozalab &mdash; Pairings</p>
-      <p class="muted">Signature flavors, pairing logic, and premium fusion direction.</p>
+      <p>Rozalab × Carino — Pairings</p>
+      <p class="muted">A compact, high-trust flavour atlas that explains itself clearly.</p>
     </footer>
   </body>
 </html>
