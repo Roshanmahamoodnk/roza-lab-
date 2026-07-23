@@ -1,22 +1,21 @@
 # Rozalab × Carino
 
-Premium ice cream R&amp;D studio site for Carino. The website presents pairing logic, sample development, SOP, CCP, equipment planning, and launch-ready storytelling in a calm editorial system.
+Cryogenic flavour engineering site for Carino. The main experience is a dark, cinematic, motion-rich single-page studio that presents pairing logic, sample development, SOP, CCP, scale-up, and a live assistant layer.
 
-## Site structure
+## Main experience
+- `index.html` — immersive cryogenic studio homepage
 
-- `index.html` — home and lab console
+## Supporting pages
 - `brand.html` — brand vision and visual system
-- `menu.html` — pairing atlas and flavour logic
+- `menu.html` — pairing atlas and SKU direction
 - `operations.html` — SOP, CCP, and equipment stack
-- `lab.html` — evidence room, build trace, and system map
-- `launch.html` — intake form and launch request flow
+- `lab.html` — evidence room and build trace
+- `launch.html` — client intake and tasting requests
 
 ## Focus
-
-- Carino-focused premium ice cream R&amp;D
-- Clear pairing decisions, including rejected combinations
-- Hero SKU development and signature flavour logic
-- SOP, sanitation, temperature control, and batch discipline
-- Equipment and scale planning for pilot and partner production
-- A premium, human-authored visual language with custom SVG art
-- Motion-rich but restrained interactions that avoid generic AI-template styling
+- premium, human-authored design
+- advanced motion and atmospheric visuals
+- pairing intelligence with rejected combinations
+- formulation and process clarity
+- manufacturing and QSR scale path
+- custom visuals and a studio-like assistant experience
