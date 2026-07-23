@@ -1,378 +1,109 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Rozalab × Carino is a premium ice cream R&D studio site with pairing intelligence, process clarity, and launch-ready storytelling." />
-    <title>Rozalab × Carino — Ice Cream R&amp;D Studio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="site.css" />
-    <script src="app.js" defer></script>
-  </head>
-  <body class="page page-home">
-    <header class="topbar">
-      <div class="brand">
-        <span class="brand-mark">RL</span>
-        <div class="brand-copy">
-          <strong>Rozalab × Carino</strong>
-          <p>premium ice cream R&amp;D studio</p>
-        </div>
-      </div>
-      <nav class="topnav">
-        <a href="index.html">Home</a>
-        <a href="brand.html">Vision</a>
-        <a href="menu.html">Pairings</a>
-        <a href="operations.html">Process</a>
-        <a href="lab.html">Evidence</a>
-        <a href="launch.html">Launch</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Rozalab × Carino — Cryogenic Flavour Engineering</title>
+  <meta name="description" content="Rozalab is an ice cream R&D studio for Carino. We engineer flavour like a laboratory and scale it like a factory — from a single tested pairing to a QSR line." />
+  <meta name="theme-color" content="#06080d" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#06080d;--bg-2:#0b0f18;--panel:#0e131e;--ink:#eef3fb;--ink-2:#aab6ca;--muted:#6f7d93;--line:rgba(180,205,240,.12);--line-2:rgba(180,205,240,.06);--rose:#ff5470;--rose-2:#ff8098;--frost:#5ad1ff;--frost-2:#a9ecff;--cream:#f4efe4;--disp:"Clash Display","Space Grotesk",sans-serif;--grot:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;--maxw:96rem;--pad:clamp(1.15rem,4vw,4.5rem);--e-out:cubic-bezier(.16,1,.3,1)}
+    *{box-sizing:border-box} html{-webkit-text-size-adjust:100%} body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--grot);font-size:clamp(1rem,.5vw+.9rem,1.06rem);line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden} body.loading{overflow:hidden;height:100vh}
+    img{max-width:100%;display:block} a{color:inherit;text-decoration:none} ::selection{background:var(--rose);color:#fff}
+    .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)} h1,h2,h3,h4{font-family:var(--disp);font-weight:500;margin:0;line-height:.98;letter-spacing:-.02em} p{margin:0 0 1em}
+    .tag{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--frost)} .subtle,.muted{color:var(--ink-2)} .mono{font-variant-numeric:tabular-nums}
+    #gl{position:fixed;inset:0;width:100vw;height:100vh;z-index:0;pointer-events:none;opacity:0;transition:opacity 1.2s ease} #gl.on{opacity:1}
+    .atmos{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(50% 40% at 78% 12%, rgba(90,209,255,.16), transparent 60%),radial-gradient(46% 42% at 16% 88%, rgba(255,84,112,.14), transparent 62%),radial-gradient(60% 50% at 50% 50%, rgba(30,50,90,.25), transparent 70%),var(--bg)}
+    .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+    .page{position:relative;z-index:2}
+    .cursor,.cursor-dot{position:fixed;top:0;left:0;z-index:200;pointer-events:none;border-radius:50%;mix-blend-mode:difference;will-change:transform} .cursor{width:34px;height:34px;border:1.4px solid #fff;margin:-17px 0 0 -17px;transition:width .3s,height .3s,margin .3s,opacity .3s;opacity:0} .cursor-dot{width:5px;height:5px;background:#fff;margin:-2.5px 0 0 -2.5px;opacity:0} .cursor.hover{width:64px;height:64px;margin:-32px 0 0 -32px;background:rgba(255,255,255,.08)} body.cursor-ready .cursor,body.cursor-ready .cursor-dot{opacity:1} @media(hover:none),(pointer:coarse){.cursor,.cursor-dot{display:none}}
+    #pre{position:fixed;inset:0;z-index:300;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4rem} #pre .barwrap{width:min(58vw,320px);height:2px;background:var(--line);overflow:hidden;border-radius:2px} #pre .bar{height:100%;width:0;background:linear-gradient(90deg,var(--frost),var(--rose));transform-origin:left} #pre .pct{font-family:var(--disp);font-size:clamp(3rem,9vw,6rem);font-weight:500;line-height:1;letter-spacing:-.03em;color:var(--ink)} #pre .word{font-family:var(--grot);font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--muted)}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:90;display:flex;align-items:center;justify-content:space-between;padding:1.1rem var(--pad);transition:padding .4s var(--e-out),background .5s,backdrop-filter .5s;mix-blend-mode:normal} .nav.solid{padding:.7rem var(--pad);background:rgba(6,8,13,.62);backdrop-filter:blur(14px) saturate(1.3);border-bottom:1px solid var(--line-2)} .brand{display:flex;align-items:center;gap:.7rem;font-family:var(--disp);font-weight:600;font-size:1.12rem;letter-spacing:-.01em} .navlinks{display:flex;gap:1.9rem;align-items:center} .navlinks a{font-size:.82rem;letter-spacing:.03em;color:var(--ink-2);position:relative;padding:.2rem 0;overflow:hidden} .navlinks a span{display:inline-block;transition:transform .4s var(--e-out)} .navlinks a::after{content:attr(data-t);position:absolute;left:0;top:100%;color:var(--frost);transition:transform .4s var(--e-out)} .navlinks a:hover span{transform:translateY(-140%)} .navlinks a:hover::after{transform:translateY(-100%)} .nav-cta{font-family:var(--grot);font-size:.8rem;font-weight:600;letter-spacing:.02em;border:1.4px solid var(--line);border-radius:2rem;padding:.55rem 1.15rem;color:var(--ink);display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;background:rgba(255,255,255,.02);transition:.3s var(--e-out)} .nav-cta:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)} .nav-cta .dot{width:.45rem;height:.45rem;border-radius:50%;background:var(--frost);box-shadow:0 0 8px var(--frost)} @media(max-width:880px){.navlinks{display:none}.nav-cta .txt{display:none}}
+    .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:14vh;padding-bottom:6vh} .hero .kick{display:flex;align-items:center;gap:1rem;margin-bottom:clamp(1.4rem,4vh,2.6rem);opacity:0} .hero .kick .ln{height:1px;width:clamp(2rem,8vw,6rem);background:var(--line)} .h1{font-family:var(--disp);font-weight:500;font-size:clamp(3rem,13vw,12.5rem);line-height:.85;letter-spacing:-.035em} .h1 .row{display:block;overflow:hidden;padding:.02em 0} .h1 .row>span{display:block;will-change:transform} .h1 .out{-webkit-text-stroke:1.3px var(--ink-2);color:transparent;font-weight:400} .h1 em{font-style:normal;color:var(--rose)} .hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-top:clamp(1.8rem,5vh,3.4rem)} .hero-foot .lead{max-width:38ch;font-size:clamp(1.05rem,1.4vw,1.3rem);color:var(--ink-2);opacity:0} .hero-stats{display:flex;gap:clamp(1.4rem,4vw,3rem);opacity:0} .hstat .n{font-family:var(--disp);font-size:clamp(1.7rem,3vw,2.6rem);font-weight:500;letter-spacing:-.02em;line-height:1} .hstat .n b{color:var(--frost);font-weight:500} .hstat .l{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:.3rem} .scrollcue{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:0} .scrollcue .rail{width:1px;height:2.4rem;background:var(--line);position:relative;overflow:hidden} .scrollcue .rail::after{content:"";position:absolute;inset:0;background:var(--frost);transform:translateY(-100%);animation:drop 2s var(--e-out) infinite} @keyframes drop{60%{transform:translateY(0)}100%{transform:translateY(100%)}}
+    .sec{position:relative;padding-block:clamp(5rem,15vh,11rem)} .sechead{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:start;margin-bottom:clamp(2.4rem,6vh,4rem)} .secno{font-family:var(--grot);font-size:.8rem;font-weight:700;letter-spacing:.06em;color:var(--rose);padding-top:.6rem} .eyebrow{margin-bottom:1.1rem;display:block} .line-reveal{overflow:hidden} .line-reveal>span{display:block;will-change:transform} h2{font-size:clamp(2.2rem,6.4vw,5.2rem);font-weight:500} .reveal{opacity:0;transform:translateY(30px)}
+    .vision{display:grid;grid-template-columns:1fr;gap:clamp(2rem,5vw,4rem)} @media(min-width:920px){.vision{grid-template-columns:1.1fr .9fr}} .vision .big{font-family:var(--disp);font-weight:400;font-size:clamp(1.5rem,2.6vw,2.3rem);line-height:1.16;letter-spacing:-.015em;color:var(--ink)} .vision .big em{font-style:normal;color:var(--frost)} .pillars{border-top:1px solid var(--line)} .pillar{padding:1.3rem 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:2.4rem 1fr;gap:1rem} .pillar .n{font-size:.78rem;color:var(--muted);font-weight:600;padding-top:.3rem} .pillar h4{font-size:1.3rem;font-weight:500;margin-bottom:.3rem} .pillar p{margin:0;font-size:.94rem;color:var(--ink-2)}
+    .marquee{border-block:1px solid var(--line);padding:1.4rem 0;overflow:hidden;white-space:nowrap;display:flex;gap:2.5rem} .marquee .track{display:inline-flex;gap:2.5rem;align-items:center;will-change:transform} .marquee span{font-family:var(--disp);font-size:clamp(1.6rem,3.4vw,2.8rem);font-weight:500;color:var(--ink);letter-spacing:-.02em} .marquee .star{color:var(--rose)} .marquee .o{-webkit-text-stroke:1.2px var(--ink-2);color:transparent}
+    .plot{position:relative;margin-top:clamp(2rem,5vh,3.4rem);height:min(64vh,600px);border:1px solid var(--line);border-radius:4px;overflow:hidden;background:rgba(10,15,24,.4)} .plot .grid{position:absolute;inset:0;pointer-events:none;background:linear-gradient(var(--line-2) 1px,transparent 1px) 0 0/100% 25%,linear-gradient(90deg,var(--line-2) 1px,transparent 1px) 0 0/12.5% 100%} .axis-x{position:absolute;left:0;right:0;bottom:2.4rem;height:1px;background:rgba(180,205,240,.28);transform-origin:left} .axis-lab{position:absolute;font-size:.64rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+    .node{position:absolute;transform:translate(-50%,-50%);cursor:pointer;z-index:3} .node .dot{display:block;width:.9rem;height:.9rem;border-radius:50%;background:var(--frost);transition:transform .3s var(--e-out),box-shadow .3s} .node[data-cat="Floral"] .dot{background:#ff86c8} .node[data-cat="Tropical"] .dot{background:#ffd24a} .node[data-cat="Fresh"] .dot{background:#54e5c8} .node[data-cat="Luxury"] .dot{background:#ffab5e} .node[data-cat="Depth"] .dot{background:#b78bff} .node[data-cat="Dessert"] .dot{background:#ff6a8a} .node[data-rej="1"] .dot{background:transparent;border:1.5px dashed var(--muted);width:.7rem;height:.7rem} .node:hover .dot,.node:focus-visible .dot{transform:scale(1.6);box-shadow:0 0 0 7px rgba(90,209,255,.12),0 0 22px rgba(90,209,255,.4)} .node .card{position:absolute;bottom:1.6rem;left:50%;transform:translateX(-50%) translateY(6px);width:15.5rem;max-width:56vw;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;box-shadow:0 24px 60px -20px #000;opacity:0;visibility:hidden;transition:.28s var(--e-out);pointer-events:none;z-index:9} .node:hover .card,.node:focus-visible .card{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)} .node .card .cn{font-family:var(--disp);font-size:1.08rem;font-weight:600;margin-bottom:.2rem} .node .card .meta{display:flex;justify-content:space-between;font-size:.7rem;color:var(--muted);letter-spacing:.04em;margin-bottom:.4rem} .node .card .conf{color:var(--frost);font-weight:600} .node .card .note{font-size:.82rem;color:var(--ink-2);line-height:1.45}
+    .legend{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;margin-top:1.4rem} .legend span{font-size:.72rem;color:var(--ink-2);display:inline-flex;align-items:center;gap:.45rem} .legend i{width:.6rem;height:.6rem;border-radius:50%;display:inline-block} @media(max-width:680px){.plot{height:auto;padding:1rem;background:none;border:none}.axis-x,.axis-lab,.grid{display:none}.node{position:relative!important;left:auto!important;top:auto!important;transform:none;border-top:1px solid var(--line);padding-top:.8rem;display:grid;grid-template-columns:auto 1fr;gap:.8rem;align-items:center}.node .card{position:relative;opacity:1;visibility:visible;transform:none;left:auto;bottom:auto;box-shadow:none;width:100%;max-width:none}}
+    .stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden} @media(min-width:760px){.stats{grid-template-columns:repeat(4,1fr)}} .stat{background:var(--bg-2);padding:clamp(1.6rem,3vw,2.4rem)} .stat .num{font-family:var(--disp);font-size:clamp(2.4rem,5vw,3.8rem);font-weight:500;letter-spacing:-.03em;line-height:1} .stat .num .u{color:var(--frost);font-size:.5em;margin-left:.1em} .stat .cap{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.6rem}
+    .sku{display:grid;grid-template-columns:auto 1fr auto;gap:1.4rem;align-items:center;padding:1.7rem 0;border-top:1px solid var(--line);position:relative;transition:padding .35s var(--e-out)} .sku:last-child{border-bottom:1px solid var(--line)} .sku .code{font-size:.76rem;color:var(--rose);font-weight:600;letter-spacing:.05em} .sku .nm{font-family:var(--disp);font-size:clamp(1.5rem,3.6vw,2.7rem);font-weight:500;letter-spacing:-.02em;line-height:1;transition:transform .4s var(--e-out)} .sku .role{font-family:var(--grot);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:2rem;padding:.2rem .6rem;margin-left:.9rem;vertical-align:middle} .sku .desc{color:var(--ink-2);font-size:.92rem;max-width:44ch;margin-top:.5rem} .sku .time{font-family:var(--disp);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:500;color:var(--ink);white-space:nowrap} .sku .time small{font-family:var(--grot);font-size:.62rem;letter-spacing:.1em;color:var(--muted);display:block;text-align:right} @media(hover:hover){.sku:hover{padding-inline:1.2rem}.sku:hover .nm{transform:translateX(.4rem);color:var(--frost)}} @media(max-width:640px){.sku{grid-template-columns:1fr;gap:.5rem}.sku .time{text-align:left}.sku .time small{text-align:left}}
+    .proc{position:relative;padding-left:clamp(1.4rem,4vw,3rem)} .proc .spine{position:absolute;left:.4rem;top:0;bottom:0;width:2px;background:var(--line)} .proc .fill{position:absolute;left:0;top:0;width:2px;height:0;background:linear-gradient(var(--frost),var(--rose));transform-origin:top} .pstep{position:relative;padding:1.4rem 0;border-bottom:1px solid var(--line)} .pstep::before{content:"";position:absolute;left:calc(-1*clamp(1.4rem,4vw,3rem) + -.1rem);top:2rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--bg);border:2px solid var(--muted);transform:translateX(.05rem)} .pstep .pn{font-family:var(--disp);font-size:.9rem;color:var(--frost);font-weight:600} .pstep h4{font-size:clamp(1.3rem,2.4vw,1.9rem);font-weight:500;margin:.3rem 0 .4rem} .pstep p{margin:0;color:var(--ink-2);font-size:.95rem;max-width:54ch} .pstep .temp{color:var(--frost);font-weight:600}
+    .ccp{margin-top:clamp(2rem,5vh,3rem);border:1px solid rgba(255,84,112,.4);border-radius:8px;padding:clamp(1.3rem,3vw,2rem);background:linear-gradient(180deg,rgba(255,84,112,.06),transparent)} .ccp .tag{color:var(--rose)} .ccp-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem 1.6rem;margin-top:1rem} .ccp-list div{border-left:2px solid var(--rose);padding-left:.9rem} .ccp-list h5{font-family:var(--disp);font-size:1.05rem;font-weight:500;margin:0 0 .2rem} .ccp-list p{margin:0;font-size:.84rem;color:var(--ink-2)}
+    .path{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden} @media(min-width:920px){.path{grid-template-columns:repeat(4,1fr)}} .stage{background:var(--bg-2);padding:clamp(1.6rem,2.6vw,2.2rem);min-height:15rem;display:flex;flex-direction:column;position:relative;overflow:hidden} .stage .no{font-size:.76rem;color:var(--rose);font-weight:600;letter-spacing:.08em} .stage h4{font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:500;margin:.9rem 0 .6rem} .stage p{font-size:.9rem;color:var(--ink-2);margin:0} .stage .arw{margin-top:auto;padding-top:1.2rem;color:var(--muted);font-size:1.3rem} .stage::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--frost);transition:width .6s var(--e-out)} .stage:hover::after{width:100%}
+    .contact-grid{display:grid;grid-template-columns:1fr;gap:clamp(2rem,5vw,4rem);margin-top:clamp(2rem,5vh,4rem)} @media(min-width:840px){.contact-grid{grid-template-columns:1.1fr .9fr}} .contact p{color:var(--ink-2);max-width:42ch} .big-cta{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--grot);font-weight:600;font-size:1rem;background:var(--rose);color:#fff;border:0;border-radius:2.4rem;padding:1rem 1.7rem;cursor:pointer;transition:.35s var(--e-out);margin-top:.4rem} .big-cta:hover{background:var(--frost);color:var(--bg);transform:translateY(-2px)} .cdetails{border-top:1px solid var(--line)} .cdetails a,.cdetails div{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;padding:1.1rem 0;border-bottom:1px solid var(--line)} .cdetails .k{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)} .cdetails .v{font-size:1.05rem;font-family:var(--disp);font-weight:500} .cdetails a:hover .v{color:var(--frost)} .note-ph{font-size:.72rem;color:var(--muted);margin-top:1rem}
+    .foot{border-top:1px solid var(--line);padding:2.6rem var(--pad);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;color:var(--muted);font-size:.8rem} .foot a:hover{color:var(--ink)}
+    #rozaFab{position:fixed;right:clamp(1rem,3vw,2rem);bottom:clamp(1rem,3vw,2rem);z-index:120;display:inline-flex;align-items:center;gap:.6rem;background:var(--ink);color:var(--bg);border:0;border-radius:2.6rem;padding:.85rem 1.15rem .85rem 1rem;cursor:pointer;font-family:var(--grot);font-size:.86rem;font-weight:600;box-shadow:0 16px 44px -12px rgba(0,0,0,.7);transition:transform .3s var(--e-out)} #rozaFab:hover{transform:translateY(-2px)} #rozaFab .av{width:1.7rem;height:1.7rem;border-radius:50%;background:var(--rose);display:grid;place-items:center;color:#fff;font-family:var(--disp);font-weight:600;font-size:.82rem;position:relative} #rozaFab.hidden{opacity:0;pointer-events:none;transform:scale(.85)}
+    #rozaPanel{position:fixed;right:clamp(1rem,3vw,2rem);bottom:clamp(1rem,3vw,2rem);z-index:121;width:min(24rem,calc(100vw - 2rem));height:min(34rem,calc(100svh - 2rem));background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:0 34px 80px -22px #000;display:flex;flex-direction:column;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(16px) scale(.98);transition:.34s var(--e-out)} #rozaPanel.open{opacity:1;visibility:visible;transform:none}
+    .rp-head{display:flex;align-items:center;gap:.7rem;padding:.9rem 1rem;border-bottom:1px solid var(--line);background:var(--bg-2)} .rp-head .av{width:2.1rem;height:2.1rem;border-radius:50%;background:var(--rose);display:grid;place-items:center;color:#fff;font-family:var(--disp);font-weight:600;position:relative} .rp-head .av .live{position:absolute;right:-1px;bottom:-1px;width:.6rem;height:.6rem;border-radius:50%;background:var(--frost);border:2px solid var(--bg-2)} .rp-head .who{flex:1;line-height:1.2} .rp-head .who b{font-family:var(--disp);font-weight:600;font-size:1rem;display:block} .rp-head .who span{font-size:.66rem;color:var(--muted);letter-spacing:.03em} .rp-head button{background:none;border:0;color:var(--muted);cursor:pointer;font-size:1.3rem;line-height:1} .rp-head button:hover{color:var(--ink)}
+    .rp-body{flex:1;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:.7rem} .rp-body::-webkit-scrollbar{width:6px} .rp-body::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+    .msg{max-width:86%;padding:.6rem .8rem;border-radius:12px;font-size:.9rem;line-height:1.5;white-space:pre-wrap;word-wrap:break-word} .msg.bot{background:var(--bg-2);color:var(--ink);align-self:flex-start;border-bottom-left-radius:3px} .msg.user{background:var(--rose);color:#fff;align-self:flex-end;border-bottom-right-radius:3px} .msg.err{background:rgba(255,84,112,.12);color:var(--rose-2);align-self:flex-start;border:1px solid rgba(255,84,112,.3)}
+    .typing{align-self:flex-start;display:inline-flex;gap:.28rem;padding:.7rem .85rem;background:var(--bg-2);border-radius:12px} .typing i{width:.42rem;height:.42rem;border-radius:50%;background:var(--muted);animation:blink 1.2s infinite} .typing i:nth-child(2){animation-delay:.2s} .typing i:nth-child(3){animation-delay:.4s} @keyframes blink{0%,60%,100%{opacity:.25;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+    .chips{display:flex;flex-wrap:wrap;gap:.4rem;padding:0 1rem .6rem}.chip{font-size:.74rem;border:1px solid var(--line);background:var(--bg-2);border-radius:2rem;padding:.35rem .7rem;cursor:pointer;color:var(--ink-2);transition:.2s} .chip:hover{border-color:var(--frost);color:var(--ink)}
+    .rp-foot{border-top:1px solid var(--line);padding:.7rem;display:flex;gap:.5rem;align-items:flex-end} .rp-foot textarea{flex:1;border:1px solid var(--line);border-radius:10px;padding:.6rem .7rem;font-family:var(--grot);font-size:.88rem;resize:none;max-height:6rem;background:var(--bg);color:var(--ink);line-height:1.4} .rp-foot textarea:focus{outline:none;border-color:var(--frost)} .rp-send{background:var(--ink);color:var(--bg);border:0;border-radius:10px;width:2.5rem;height:2.5rem;cursor:pointer;display:grid;place-items:center;flex-shrink:0;transition:.2s} .rp-send:hover{background:var(--rose);color:#fff} .rp-send:disabled{opacity:.4}
+    .rp-mode{font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:.4rem;color:var(--muted);background:var(--bg-2);border-top:1px solid var(--line)} .rp-mode b{color:var(--frost)}
+    @media(prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important}.reveal,.hero .kick,.hero-foot .lead,.hero-stats,.scrollcue{opacity:1!important;transform:none!important}.h1 .row>span,.line-reveal>span{transform:none!important}}
+    .split{display:grid;grid-template-columns:1fr;gap:clamp(2rem,5vw,4rem)} @media(min-width:920px){.split{grid-template-columns:1.1fr .9fr}} .content{position:relative;z-index:2}
+  </style>
+</head>
+<body class="loading">
+  <div class="atmos"></div>
+  <canvas id="gl"></canvas>
+  <div class="grain"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div id="pre"><div class="logo-p"><svg width="46" height="46" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 3 L24 45 M6.3 13.5 L41.7 34.5 M41.7 13.5 L6.3 34.5" stroke="#5ad1ff" stroke-width="1.4" stroke-linecap="round" opacity=".6"/><circle cx="24" cy="24" r="12.5" stroke="#eef3fb" stroke-width="1.6"/><text x="24" y="28.5" text-anchor="middle" font-family="Clash Display,sans-serif" font-size="12" font-weight="600" fill="#eef3fb">RL</text></svg></div><div class="pct" id="prePct">0</div><div class="barwrap"><div class="bar" id="preBar"></div></div><div class="word">Cryogenic Flavour Engineering</div></div>
+  <nav class="nav" id="nav"><a href="#top" class="brand" data-cursor><svg width="30" height="30" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 6 L24 42 M9 15 L39 33 M39 15 L9 33" stroke="#5ad1ff" stroke-width="1.5" stroke-linecap="round" opacity=".55"/><circle cx="24" cy="24" r="11" stroke="#eef3fb" stroke-width="1.6"/></svg>Rozalab&nbsp;×&nbsp;Carino</a><div class="navlinks"><a href="#vision" data-t="Vision"><span>Vision</span></a><a href="#atlas" data-t="Atlas"><span>Atlas</span></a><a href="#skus" data-t="SKUs"><span>SKUs</span></a><a href="#process" data-t="Process"><span>Process</span></a><a href="#scale" data-t="Scale"><span>Scale</span></a></div><button class="nav-cta" data-open-chat data-cursor><span class="dot"></span><span class="txt">Talk to the lab</span></button></nav>
+  <div class="page content">
+    <header class="hero wrap" id="top"><div class="kick"><span class="tag">Ice-Cream R&amp;D Studio</span><span class="ln"></span><span class="tag" style="color:var(--muted)">Carino project · India</span></div><h1 class="h1" aria-label="We engineer flavour at minus twenty"><span class="row"><span>We engineer</span></span><span class="row"><span><em>flavour</em> at</span></span><span class="row"><span class="out">minus&nbsp;twenty.</span></span></h1><div class="hero-foot"><p class="lead">A laboratory for cold things — where every pairing is tested, every batch is documented, and every flavour is built to survive the jump from a sample to a production line.</p><div class="hero-stats"><div class="hstat"><div class="n"><b>240</b>+</div><div class="l">Pairings tested</div></div><div class="hstat"><div class="n"><b>4</b></div><div class="l">Hero SKUs</div></div><div class="hstat"><div class="n"><b>6</b>wk</div><div class="l">Sample → shelf</div></div></div></div><div class="scrollcue">Scroll<span class="rail"></span></div></header>
+    <section class="sec wrap" id="vision"><div class="sechead"><span class="secno">01</span><div><span class="tag eyebrow">The Studio</span><h2 class="line-reveal"><span>A research desk</span><span>for cold things.</span></h2></div></div><div class="vision"><div class="reveal"><p class="big">Most ice cream fails not in the tasting, but in the <em>scaling</em>. A pairing that sings by hand collapses when it meets a freezer, a cold chain, and a unit cost. Rozalab lives in that gap — we work like a laboratory and think like a factory.</p></div><div class="pillars reveal"><div class="pillar"><span class="n">/01</span><div><h4>Pairing, ranked</h4><p>Combinations scored, tested, and promoted to a SKU — or rejected with a reason.</p></div></div><div class="pillar"><span class="n">/02</span><div><h4>Sample to spec</h4><p>Each hero flavour becomes a documented formulation: base, inclusions, prep time.</p></div></div><div class="pillar"><span class="n">/03</span><div><h4>Process &amp; safety</h4><p>SOPs with pasteurisation windows and critical control points, logged for audit.</p></div></div><div class="pillar"><span class="n">/04</span><div><h4>Built to scale</h4><p>Pilot run, manufacturing partner, QSR rollout — one continuous pathway.</p></div></div></div></div></section>
+    <div class="marquee" aria-hidden="true"><div class="track" id="marqA"><span>YUZU</span><span class="star">✳</span><span class="o">LYCHEE&nbsp;ROSE</span><span class="star">✳</span><span>SAFFRON&nbsp;PISTACHIO</span><span class="star">✳</span><span class="o">BLACK&nbsp;SESAME</span><span class="star">✳</span><span>MANGO&nbsp;PASSION</span><span class="star">✳</span><span>YUZU</span><span class="star">✳</span><span class="o">LYCHEE&nbsp;ROSE</span><span class="star">✳</span><span>SAFFRON&nbsp;PISTACHIO</span><span class="star">✳</span><span class="o">BLACK&nbsp;SESAME</span><span class="star">✳</span><span>MANGO&nbsp;PASSION</span><span class="star">✳</span></div></div>
+    <section class="sec wrap" id="atlas"><div class="sechead"><span class="secno">02</span><div><span class="tag eyebrow">Pairing Atlas</span><h2 class="line-reveal"><span>Every flavour starts</span><span>as a hypothesis.</span></h2><p class="reveal" style="color:var(--ink-2);max-width:48ch;margin-top:1rem">Each specimen is a tested pairing, plotted by confidence. Hover a node for its tasting note — or ask the assistant why we rejected black sesame &amp; vanilla.</p></div></div><div class="plot" id="plot" aria-label="Pairing confidence plot"><div class="grid"></div><span class="axis-x" id="axisx"></span><span class="axis-lab" style="left:1rem;bottom:.7rem">LOW 0.20</span><span class="axis-lab" style="right:.8rem;bottom:.7rem">0.36 HIGH</span><span class="axis-lab" style="left:1rem;top:.8rem">↑ CATEGORY SPREAD</span></div><div class="legend" id="legend"></div></section>
+    <section class="sec wrap"><div class="stats reveal" id="stats"><div class="stat"><div class="num" data-to="240"><span class="v">0</span><span class="u">+</span></div><div class="cap">Pairings tested</div></div><div class="stat"><div class="num" data-to="82"><span class="v">0</span><span class="u">°C</span></div><div class="cap">Pasteurisation</div></div><div class="stat"><div class="num" data-to="6"><span class="v">0</span><span class="u">wk</span></div><div class="cap">Sample to shelf</div></div><div class="stat"><div class="num" data-to="4"><span class="v">0</span></div><div class="cap">Scaling stages</div></div></div></section>
+    <section class="sec wrap" id="skus"><div class="sechead"><span class="secno">03</span><div><span class="tag eyebrow">SKU Development</span><h2 class="line-reveal"><span>Four flavours,</span><span>fully documented.</span></h2></div></div><div id="skuList"></div></section>
+    <section class="sec wrap" id="process"><div class="sechead"><span class="secno">04</span><div><span class="tag eyebrow">Process &amp; SOP</span><h2 class="line-reveal"><span>The same five steps,</span><span>every single batch.</span></h2></div></div><div class="proc reveal" id="proc"><div class="spine"></div><div class="fill" id="procFill"></div><div class="pstep"><div class="pn">STEP 01</div><h4>Sanitise &amp; weigh</h4><p>Every contact surface sanitised; every input weighed to the gram and logged before anything is blended.</p></div><div class="pstep"><div class="pn">STEP 02</div><h4>Blend the dry base</h4><p>Milk powder, sugar, dextrose, stabiliser and salt combined dry so they hydrate evenly, batch to batch.</p></div><div class="pstep"><div class="pn">STEP 03</div><h4>Pasteurise &amp; cool <span class="temp">82–85 °C</span></h4><p>The mix is held in the pasteurisation window, then cooled — the step that decides both safety and mouthfeel.</p></div><div class="pstep"><div class="pn">STEP 04</div><h4>Age, flavour &amp; churn</h4><p>The base ages to develop body; flavours and inclusions go in and the mix churns to target overrun.</p></div><div class="pstep"><div class="pn">STEP 05</div><h4>Harden, label &amp; store</h4><p>Blast-hardened, labelled with batch and date, moved to cold storage with the chain logged end to end.</p></div></div><div class="ccp reveal"><span class="tag">Critical Control Points — logged, not assumed</span><div class="ccp-list"><div><h5>Temperature</h5><p>Pasteurisation &amp; storage logged per batch.</p></div><div><h5>Sanitation</h5><p>Contact surfaces verified before each run.</p></div><div><h5>Holding time</h5><p>Age and hold windows tracked to spec.</p></div><div><h5>Mix integrity</h5><p>Overrun &amp; consistency checked pre-hardening.</p></div></div></div></section>
+    <section class="sec wrap" id="scale"><div class="sechead"><span class="secno">05</span><div><span class="tag eyebrow">Manufacturing &amp; QSR</span><h2 class="line-reveal"><span>From one bench</span><span>to a menu at scale.</span></h2></div></div><div class="path reveal"><div class="stage"><span class="no">STAGE 01</span><h4>Sample development</h4><p>We build and taste until a flavour earns its place — documented, not guessed.</p><span class="arw">→</span></div><div class="stage"><span class="no">STAGE 02</span><h4>Pilot production</h4><p>The formula runs at pilot volume to find what breaks before it costs anything.</p><span class="arw">→</span></div><div class="stage"><span class="no">STAGE 03</span><h4>Manufacturing partner</h4><p>We match the spec to a plant that can hold it, and transfer the full process.</p><span class="arw">→</span></div><div class="stage"><span class="no">STAGE 04</span><h4>QSR growth</h4><p>The system rolls onto menus — consistent unit by unit, store by store.</p><span class="arw">◆</span></div></div></section>
+    <section class="sec wrap" id="contact"><div class="sechead"><span class="secno">06</span><div><span class="tag eyebrow">Work with the lab</span><h2 class="line-reveal"><span>Have a flavour</span><span>worth scaling?</span></h2></div></div><div class="contact-grid"><div class="reveal contact"><p style="font-size:clamp(1.05rem,1.3vw,1.25rem)">Tell us what you're building — a signature scoop, a stick range, a QSR dessert line — and we'll tell you honestly what it takes to get it to a plant. The fastest way in is to ask the assistant; it briefs the lab for you.</p><button class="big-cta" data-open-chat data-cursor>Ask the Roza Lab Assistant →</button></div><div class="cdetails reveal"><a href="mailto:hello@rozalab.studio" data-cursor><span class="k">Email</span><span class="v">hello@rozalab.studio</span></a><a href="tel:+910000000000" data-cursor><span class="k">Phone</span><span class="v">+91 00000 00000</span></a><div><span class="k">Studio</span><span class="v">Bengaluru, India</span></div><div><span class="k">For</span><span class="v">Brands · Manufacturers · QSR</span></div><p class="note-ph">Contact details are placeholders — swap in your real ones before publishing.</p></div></div></section>
+    <footer class="foot"><span>© 2026 Roza Lab — Cryogenic Flavour Engineering.</span><span><a href="#top" data-cursor>Back to top ↑</a></span></footer>
+  </div>
 
-    <main>
-      <section class="hero">
-        <div class="hero-copy reveal">
-          <p class="tag">Client-facing R&amp;D for Carino</p>
-          <h1>Ice cream work that feels premium, rigorous, and ready to launch.</h1>
-          <p class="lead">
-            Rozalab turns Carino's brief into a clear system: pairing direction, sample development,
-            process discipline, and a menu that can be explained, defended, and scaled.
-          </p>
+  <button id="rozaFab" data-open-chat data-cursor aria-label="Open Roza Lab Assistant"><span class="av">R</span> Roza&nbsp;Lab Assistant</button>
+  <div id="rozaPanel" role="dialog" aria-label="Roza Lab Assistant"><div class="rp-head"><span class="av">R<span class="live"></span></span><div class="who"><b>Roza Lab Assistant</b><span>Online · flavours, process &amp; scale</span></div><button id="rpClose" data-cursor aria-label="Close">×</button></div><div class="rp-body" id="rpBody"></div><div class="chips" id="rpChips"></div><div class="rp-foot"><textarea id="rpInput" rows="1" placeholder="Ask the lab anything…" aria-label="Message"></textarea><button class="rp-send" id="rpSend" data-cursor aria-label="Send"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button></div><div class="rp-mode" id="rpMode"></div></div>
 
-          <div class="hero-meta">
-            <div class="mini-stat">
-              <strong>Brief to bench</strong>
-              <span>One studio flow from idea to sample</span>
-            </div>
-            <div class="mini-stat">
-              <strong>Hero SKU</strong>
-              <span>Names, method, and service logic</span>
-            </div>
-            <div class="mini-stat">
-              <strong>Scale ready</strong>
-              <span>Process, CCP, and launch handoff</span>
-            </div>
-          </div>
+  <script>
+    const PAIRINGS=[{a:"Lychee",b:"Rosewater",conf:.32,cat:"Floral",note:"Our signature lane. Rose lifts lychee's perfume without turning soapy — the balance point is tiny."},{a:"Mango",b:"Passionfruit",conf:.35,cat:"Tropical",note:"Highest-confidence tropical. Passionfruit acid keeps mango from reading flat and sweet."},{a:"Coconut milk",b:"Lime",conf:.28,cat:"Fresh",note:"Clean and bright. Coconut fat carries the lime oil; best under-sweetened."},{a:"Saffron",b:"Pistachio",conf:.23,cat:"Luxury",note:"Lower confidence, high ceiling. Saffron overdoses easily — a premium SKU, not a daily driver."},{a:"Black sesame",b:"Honey",conf:.21,cat:"Depth",note:"Roasted depth with a honey round-off. Needs a dark, nutty base to hold together."},{a:"Yuzu",b:"Cheesecake",conf:.34,cat:"Dessert",note:"Our hero. Yuzu's sharpness against a rich cheesecake base — instantly legible, high recall."},{a:"Espresso",b:"Brownie",conf:.30,cat:"Dessert",note:"Comfort category. Bitter espresso plus fudge; reliable, familiar, sells itself."},{a:"Black sesame",b:"Vanilla",conf:.12,cat:"Depth",rej:true,note:"Rejected — too flat. Vanilla mutes sesame's roast instead of framing it. Honey did the job better."}];
+    const SKUS=[{code:"SKU-01",name:"Yuzu Cloud Cheesecake",role:"Hero",time:18,desc:"Sharp yuzu against a rich cheesecake base — our most legible, highest-recall flavour."},{code:"SKU-02",name:"Lychee Rose Signal",role:"Signature",time:15,desc:"The floral signature — lychee perfume lifted by a measured rosewater note."},{code:"SKU-03",name:"Saffron Pistachio Prime",role:"Premium",time:22,desc:"A luxury scoop — saffron dosed with restraint over roasted pistachio."},{code:"SKU-04",name:"Black Sesame Velvet",role:"Depth",time:20,desc:"Roasted black sesame rounded with honey for a dark, nutty depth."}];
+  </script>
 
-          <div class="chips">
-            <span>pairing system</span>
-            <span>sample development</span>
-            <span>SOP + CCP</span>
-            <span>launch language</span>
-          </div>
-
-          <div class="hero-actions">
-            <a class="button primary" href="#lab-studio">Open the lab console</a>
-            <a class="button secondary" href="#scale-path">See the scale path</a>
-            <a class="button secondary" href="#brief">Read the brief</a>
-          </div>
-        </div>
-
-        <div class="hero-art reveal">
-          <img src="assets/hero.svg" alt="Rozalab and Carino abstract hero illustration" />
-          <div class="art-card top reveal">
-            <p><strong>Client view</strong><br />The story Carino sees: premium, clear, and commercially credible.</p>
-          </div>
-          <div class="art-card reveal">
-            <p><strong>Studio view</strong><br />The work underneath: pairing, method, quality control, and scale.</p>
-          </div>
-        </div>
-      </section>
-
-      <div class="marquee reveal" aria-hidden="true">
-        <div class="ticker-track">
-          <span>carino brief</span>
-          <span>pairing map</span>
-          <span>hero sku</span>
-          <span>sop + ccp</span>
-          <span>pilot batch</span>
-          <span>manufacturing handoff</span>
-          <span>qsr readiness</span>
-          <span>premium presentation</span>
-        </div>
-      </div>
-
-      <section class="section" id="brief">
-        <div class="section-head reveal">
-          <p class="tag">What Carino gets</p>
-          <h2>A studio that proves why the product belongs.</h2>
-          <p>
-            The site should read like a design-and-science desk: the client can see what is being tested,
-            why it matters, and how the product becomes a premium dessert system instead of a generic menu.
-          </p>
-        </div>
-        <div class="grid four">
-          <article class="card reveal">
-            <h3>Research snapshot</h3>
-            <p>Clear notes on flavour direction, market positioning, and what the studio is studying right now.</p>
-          </article>
-          <article class="card reveal">
-            <h3>Pairing logic</h3>
-            <p>Ingredient combinations that are actually defensible: balanced, premium, and easy to explain.</p>
-          </article>
-          <article class="card reveal">
-            <h3>Sample development</h3>
-            <p>Hero SKUs, prep steps, hold time, and the details needed to judge each prototype properly.</p>
-          </article>
-          <article class="card reveal">
-            <h3>Scale readiness</h3>
-            <p>Equipment, SOP, CCP, and manufacturing handoff so the concept can move beyond the bench.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section split" id="lab-studio">
-        <div>
-          <div class="section-head compact reveal">
-            <p class="tag">Lab console</p>
-            <h2>Ask the studio how it thinks.</h2>
-            <p>
-              This interactive layer is built to feel like a live research desk. It explains the pairing logic,
-              the recipe decisions, and the production path in client-friendly language.
-            </p>
-          </div>
-
-          <div class="panel agent-shell reveal" data-lab-console>
-            <div>
-              <div class="prompt-grid">
-                <button type="button" class="button secondary" data-lab-prompt="Show the pairing logic">Pairing logic</button>
-                <button type="button" class="button secondary" data-lab-prompt="Build a hero SKU for Carino">Hero SKU</button>
-                <button type="button" class="button secondary" data-lab-prompt="Explain SOP and CCP">SOP + CCP</button>
-                <button type="button" class="button secondary" data-lab-prompt="Describe the scale-up path">Scale-up</button>
-              </div>
-
-              <div class="agent-log" data-lab-log>
-                <article class="chat-bubble assistant">
-                  <span class="chat-label">Rozalab studio</span>
-                  <p>I can explain pairing, sample development, process steps, and launch logic for Carino.</p>
-                </article>
-              </div>
-
-              <form class="form-grid" data-lab-form>
-                <input class="input" type="text" name="query" placeholder="Ask about flavour, SOP, launch, or scale" data-lab-input />
-                <div class="form-actions">
-                  <button class="button primary" type="submit">Ask the studio</button>
-                </div>
-              </form>
-            </div>
-
-            <aside class="agent-output">
-              <p class="tag">Live reasoning</p>
-              <h3 data-lab-title>Research overview</h3>
-              <p data-lab-summary>
-                Rozalab should show a premium ice cream system for Carino: pairing direction, method clarity,
-                and a launch path that feels deliberate instead of generic.
-              </p>
-
-              <div class="grid two">
-                <article class="kpi-panel reveal">
-                  <h3 data-lab-metric-1>brief</h3>
-                  <p>What the client needs to see first</p>
-                </article>
-                <article class="kpi-panel reveal">
-                  <h3 data-lab-metric-2>bench</h3>
-                  <p>Where ideas earn a place on the menu</p>
-                </article>
-                <article class="kpi-panel reveal">
-                  <h3 data-lab-metric-3>process</h3>
-                  <p>How the product stays repeatable</p>
-                </article>
-                <article class="kpi-panel reveal">
-                  <h3 data-lab-metric-4>launch</h3>
-                  <p>How the story becomes a real offer</p>
-                </article>
-              </div>
-
-              <ul class="detail-list" data-lab-points>
-                <li>Show the smallest meaningful menu that still feels premium.</li>
-                <li>Explain why a flavor stays in or gets rejected.</li>
-                <li>Keep the production logic visible, calm, and technically credible.</li>
-              </ul>
-
-              <div class="image-frame reveal">
-                <img src="assets/roza-lab-system.svg" alt="Rozalab system map diagram for Carino" />
-              </div>
-            </aside>
-          </div>
-        </div>
-
-        <div>
-          <div class="quote-panel reveal">
-            <blockquote>
-              "A premium dessert brand becomes more believable when the design reveals the process, not just the finish."
-            </blockquote>
-            <footer>Rozalab studio principle</footer>
-          </div>
-          <div class="grid two" style="margin-top: 16px;">
-            <article class="panel reveal"><h3>Visible output</h3><p>Pairing map, recipe card, process chain, and scale notes.</p></article>
-            <article class="panel reveal"><h3>Client value</h3><p>Carino sees what was researched and why it matters.</p></article>
-            <article class="panel reveal"><h3>Future-ready</h3><p>Built to support a live conversational research layer later.</p></article>
-            <article class="panel reveal"><h3>Premium tone</h3><p>Scientific, curated, and intentionally not template-like.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="signature">
-        <div class="section-head reveal">
-          <p class="tag">Signature directions</p>
-          <h2>Flavors that feel composed, not crowded.</h2>
-          <p>
-            The menu should stay tight. Each item needs a clear sensory role, a visible reason for existing,
-            and a polished story that makes the client trust the line.
-          </p>
-        </div>
-        <div class="grid four">
-          <article class="menu-card reveal">
-            <h3>Yuzu Cloud Cheesecake</h3>
-            <p class="note">Bright citrus, cream cheese ripple, and a clean premium finish.</p>
-            <div class="bar"></div>
-            <div class="meta"><span>hero SKU</span><strong>18 min</strong></div>
-          </article>
-          <article class="menu-card reveal">
-            <h3>Lychee Rose Signal</h3>
-            <p class="note">Floral, airy, and elegant with enough structure to feel expensive.</p>
-            <div class="bar"></div>
-            <div class="meta"><span>signature</span><strong>15 min</strong></div>
-          </article>
-          <article class="menu-card reveal">
-            <h3>Saffron Pistachio Prime</h3>
-            <p class="note">Luxury aroma, warm nut depth, and a strong visual cue.</p>
-            <div class="bar"></div>
-            <div class="meta"><span>premium</span><strong>22 min</strong></div>
-          </article>
-          <article class="menu-card reveal">
-            <h3>Black Sesame Velvet</h3>
-            <p class="note">Roasted, nutty, and mature. A quieter but serious dessert language.</p>
-            <div class="bar"></div>
-            <div class="meta"><span>depth</span><strong>20 min</strong></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section split" id="process-preview">
-        <div>
-          <div class="section-head compact reveal">
-            <p class="tag">How the studio works</p>
-            <h2>Brief, bench, process, launch.</h2>
-            <p>
-              The user should immediately understand that Rozalab is not just naming flavours; it is shaping
-              a production system that can survive real-world service and scale.
-            </p>
-          </div>
-          <div class="feature-rail">
-            <div class="feature-row reveal">
-              <span class="index">01</span>
-              <strong>Read the brief</strong>
-              <span>Decode Carino's ambition, audience, and premium position before anything gets made.</span>
-              <strong>direction</strong>
-            </div>
-            <div class="feature-row reveal">
-              <span class="index">02</span>
-              <strong>Test the pairings</strong>
-              <span>Compare combinations, remove weak ideas, and keep only the ones that feel deliberate.</span>
-              <strong>evidence</strong>
-            </div>
-            <div class="feature-row reveal">
-              <span class="index">03</span>
-              <strong>Prototype the SKU</strong>
-              <span>Write the method, note prep time, and decide how the flavour should be served.</span>
-              <strong>bench</strong>
-            </div>
-            <div class="feature-row reveal">
-              <span class="index">04</span>
-              <strong>Lock the process</strong>
-              <span>Sanitation, temperatures, ageing, and hardening become the repeatable control points.</span>
-              <strong>quality</strong>
-            </div>
-            <div class="feature-row reveal">
-              <span class="index">05</span>
-              <strong>Prepare launch</strong>
-              <span>Trim the menu, shape the story, and hand the client a system that can be scaled.</span>
-              <strong>launch</strong>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="quote-panel reveal">
-            <blockquote>
-              "The best premium site makes the studio feel precise, human, and impossible to mistake for a template."
-            </blockquote>
-            <footer>Rozalab digital direction</footer>
-          </div>
-          <div class="grid two" style="margin-top: 16px;">
-            <article class="kpi-panel reveal"><h3>One voice</h3><p>Carino should hear a single coherent brand system.</p></article>
-            <article class="kpi-panel reveal"><h3>One hero</h3><p>The strongest product should lead the story.</p></article>
-            <article class="kpi-panel reveal"><h3>One method</h3><p>Every page should explain the same production logic.</p></article>
-            <article class="kpi-panel reveal"><h3>One finish</h3><p>Premium presentation should be consistent everywhere.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="scale-path">
-        <div class="section-head reveal">
-          <p class="tag">Scale path</p>
-          <h2>From sample development to a real launch system.</h2>
-          <p>
-            The site should make the growth route obvious: first a stable sample, then a pilot batch,
-            then a handoff to manufacturing or QSR once the product is proven.
-          </p>
-        </div>
-        <div class="grid four roadmap-grid">
-          <article class="roadmap-item reveal">
-            <h3>1. Sample development</h3>
-            <p>Test flavour balance, texture, and the visual story before any public promise is made.</p>
-          </article>
-          <article class="roadmap-item reveal">
-            <h3>2. Pilot production</h3>
-            <p>Keep the recipe stable, document the controls, and make the results reproducible.</p>
-          </article>
-          <article class="roadmap-item reveal">
-            <h3>3. Manufacturing handoff</h3>
-            <p>Move stable SKUs into a partner environment without losing flavour quality.</p>
-          </article>
-          <article class="roadmap-item reveal">
-            <h3>4. QSR growth</h3>
-            <p>Keep the story premium while making the service model fast and reliable.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head compact reveal">
-          <p class="tag">Technique trace</p>
-          <h2>What makes the site feel advanced.</h2>
-          <p>
-            This is the build logic I’m using so the site reads like a crafted studio product instead of an AI-generated layout.
-          </p>
-        </div>
-        <div class="grid four">
-          <article class="technique-card reveal">
-            <p class="tag">Hierarchy</p>
-            <h3>Editorial structure</h3>
-            <p>Strong headline, clear subhead, then evidence and detail in a disciplined order.</p>
-          </article>
-          <article class="technique-card reveal">
-            <p class="tag">Imagery</p>
-            <h3>Custom SVG art</h3>
-            <p>Hand-built visuals and system diagrams instead of generic stock imagery.</p>
-          </article>
-          <article class="technique-card reveal">
-            <p class="tag">Motion</p>
-            <h3>Transform-based animation</h3>
-            <p>Reveal, float, and pointer glow effects that stay smooth and restrained.</p>
-          </article>
-          <article class="technique-card reveal">
-            <p class="tag">System</p>
-            <h3>Content that teaches</h3>
-            <p>Every section explains how the client benefits, how the product is made, and how it scales.</p>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <p>Rozalab × Carino — Ice Cream R&amp;D Studio</p>
-      <p class="muted">Premium pairing intelligence, process clarity, and a launch story built to feel human.</p>
-    </footer>
-  </body>
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js" } }</script>
+  <script type="module">
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduced){try{const THREE = await import('three');const canvas = document.getElementById('gl');const renderer = new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});renderer.setPixelRatio(Math.min(devicePixelRatio,1.75));renderer.setSize(innerWidth,innerHeight);const scene = new THREE.Scene();const cam = new THREE.Camera();const uniforms={uTime:{value:0},uScroll:{value:0},uPointer:{value:new THREE.Vector2(.5,.5)},uRes:{value:new THREE.Vector2(innerWidth,innerHeight)},uBg:{value:new THREE.Color('#06080d')},uBlue:{value:new THREE.Color('#0e2a4a')},uFrost:{value:new THREE.Color('#1f6f9e')},uRose:{value:new THREE.Color('#5a1230')}};const mat=new THREE.ShaderMaterial({uniforms,vertexShader:`void main(){ gl_Position=vec4(position,1.); }`,fragmentShader:`precision highp float;uniform float uTime,uScroll;uniform vec2 uPointer,uRes;uniform vec3 uBg,uBlue,uFrost,uRose;vec2 h(vec2 p){return fract(sin(vec2(dot(p,vec2(127.1,311.7)),dot(p,vec2(269.5,183.3))))*43758.5453);}float n(vec2 p){vec2 i=floor(p),f=fract(p);vec2 u=f*f*(3.-2.*f);return mix(mix(dot(h(i)-.5,f),dot(h(i+vec2(1,0))-.5,f-vec2(1,0)),u.x),mix(dot(h(i+vec2(0,1))-.5,f-vec2(0,1)),dot(h(i+vec2(1,1))-.5,f-vec2(1,1)),u.x),u.y);}float fbm(vec2 p){float s=0.,a=.5;for(int i=0;i<5;i++){s+=a*n(p);p*=1.9;a*=.5;}return s;}void main(){vec2 uv=gl_FragCoord.xy/uRes.xy;float asp=uRes.x/uRes.y;vec2 p=vec2(uv.x*asp,uv.y);float t=uTime*.045;vec2 q=vec2(fbm(p*2.2+t),fbm(p*2.2-t+3.7));float f=fbm(p*2.6+q*1.4+uPointer*.3+uScroll*.5);vec3 col=uBg;col=mix(col,uBlue,smoothstep(.1,.75,f));float frost=smoothstep(.45,.95,fbm(p*3.2+q+t*1.3));col=mix(col,uFrost,frost*.5);float rose=smoothstep(.5,1.,fbm(p*2.+q*.2-t+vec2(2.,0.)));col=mix(col,uRose,rose*.4);float d=distance(vec2(uv.x*asp,uv.y),vec2(uPointer.x*asp,uPointer.y));col+=uFrost*smoothstep(.5,.0,d)*.12;col*=.72+.28*smoothstep(1.2,.0,length(uv-.5));gl_FragColor=vec4(col,1.);}`});scene.add(new THREE.Mesh(new THREE.PlaneGeometry(2,2),mat));const target=new THREE.Vector2(.5,.5);addEventListener('pointermove',e=>{target.set(e.clientX/innerWidth,1-e.clientY/innerHeight);},{passive:true});addEventListener('resize',()=>{renderer.setSize(innerWidth,innerHeight);uniforms.uRes.value.set(innerWidth,innerHeight);});let vis=true;new IntersectionObserver(([e])=>vis=e.isIntersecting).observe(canvas);const start=performance.now();function frame(){if(vis&&!document.hidden){uniforms.uTime.value=(performance.now()-start)/1000;uniforms.uPointer.value.lerp(target,.05);uniforms.uScroll.value=(window.__scroll||0);renderer.render(scene,cam)}requestAnimationFrame(frame)}frame();canvas.classList.add('on')}catch(err){console.warn('WebGL atmosphere off:',err);}}
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;const fine=matchMedia('(pointer:fine)').matches;const G=!!window.gsap;
+      document.getElementById('skuList').innerHTML=SKUS.map(s=>`<div class="sku reveal" data-cursor><span class="code">${s.code}</span><div><div class="nm">${s.name}<span class="role">${s.role}</span></div><div class="desc">${s.desc}</div></div><div class="time">${s.time}<small>MIN PREP</small></div></div>`).join('');
+      const plot=document.getElementById('plot');const min=.20,max=.36;const cats=[...new Set(PAIRINGS.map(p=>p.cat))];const catColors={Floral:'#ff86c8',Tropical:'#ffd24a',Fresh:'#54e5c8',Luxury:'#ffab5e',Depth:'#b78bff',Dessert:'#ff6a8a'};PAIRINGS.forEach((p,i)=>{const x=6+((p.conf-min)/(max-min))*88,y=16+(i/(PAIRINGS.length-1))*64;const n=document.createElement('div');n.className='node';n.dataset.cat=p.cat;if(p.rej)n.dataset.rej='1';n.style.left=x+'%';n.style.top=y+'%';n.tabIndex=0;n.setAttribute('data-cursor','');n.setAttribute('aria-label',`${p.a} and ${p.b}, confidence ${p.conf}`);n.innerHTML=`<span class="dot"></span><div class="card"><div class="cn">${p.a} × ${p.b}</div><div class="meta"><span>${p.rej?'REJECTED':p.cat.toUpperCase()}</span><span class="conf">${p.conf.toFixed(2)}</span></div><div class="note">${p.note}</div></div>`;plot.appendChild(n);});document.getElementById('legend').innerHTML=cats.map(c=>`<span><i style="background:${catColors[c]}"></i>${c}</span>`).join('')+`<span><i style="border:1.5px dashed var(--muted)"></i>Rejected</span>`;
+      const pre=document.getElementById('pre'),pct=document.getElementById('prePct'),bar=document.getElementById('preBar');function finish(){document.body.classList.remove('loading');startHero()} if(reduced||!G){pct.textContent='100';bar.style.width='100%';if(pre)pre.style.display='none';finish()} else{const o={v:0};gsap.to(o,{v:100,duration:1.5,ease:'power2.inOut',onUpdate:()=>{pct.textContent=Math.round(o.v);bar.style.width=o.v+'%'},onComplete:()=>{gsap.to(pre,{yPercent:-100,duration:.9,ease:'power4.inOut',delay:.15,onComplete:()=>{pre.style.display='none';}});finish();}})}
+      if(G&&fine&&!reduced){const cur=document.querySelector('.cursor'),dot=document.querySelector('.cursor-dot');const xT=gsap.quickTo(cur,'x',{duration:.4,ease:'power3'}),yT=gsap.quickTo(cur,'y',{duration:.4,ease:'power3'});const xD=gsap.quickTo(dot,'x',{duration:.12,ease:'power3'}),yD=gsap.quickTo(dot,'y',{duration:.12,ease:'power3'});addEventListener('pointermove',e=>{xT(e.clientX);yT(e.clientY);xD(e.clientX);yD(e.clientY);document.body.classList.add('cursor-ready');});document.addEventListener('pointerover',e=>{if(e.target.closest('[data-cursor],a,button')) cur.classList.add('hover');});document.addEventListener('pointerout',e=>{if(e.target.closest('[data-cursor],a,button')) cur.classList.remove('hover');});}
+      let lenis; if(window.Lenis&&G&&!reduced){lenis=new Lenis({duration:1.15,smoothWheel:true});lenis.on('scroll',e=>{window.__scroll=(e.animatedScroll||window.scrollY)/((document.body.scrollHeight-innerHeight)||1);if(window.ScrollTrigger)ScrollTrigger.update();});gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();lenis.scrollTo(t,{offset:-20});}}));} else {addEventListener('scroll',()=>{window.__scroll=window.scrollY/((document.body.scrollHeight-innerHeight)||1);},{passive:true});}
+      const nav=document.getElementById('nav'); addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>60),{passive:true}); nav.classList.toggle('solid',scrollY>60);
+      function startHero(){if(!G||reduced){document.querySelectorAll('.h1 .row>span,.hero .kick,.hero-foot .lead,.hero-stats,.scrollcue').forEach(e=>{e.style.opacity=1;e.style.transform='none';});return;} const tl=gsap.timeline({defaults:{ease:'power4.out'}}); tl.to('.h1 .row>span',{yPercent:0,duration:1.05,stagger:.1,startAt:{yPercent:115}},0).to('.hero .kick',{opacity:1,duration:.7},.3).to('.hero-foot .lead',{opacity:1,y:0,duration:.8,startAt:{y:20}},.5).to('.hero-stats',{opacity:1,y:0,duration:.8,startAt:{y:20}},.6).to('.scrollcue',{opacity:1,duration:.6},.9);}
+      if(!G){document.querySelectorAll('.reveal').forEach(e=>{e.style.opacity=1;e.style.transform='none';});document.querySelectorAll('.num').forEach(el=>{const v=el.querySelector('.v');if(v)v.textContent=el.dataset.to;});return;} gsap.registerPlugin(ScrollTrigger);
+      if(!reduced){gsap.utils.toArray('.line-reveal').forEach(h=>{gsap.from(h.querySelectorAll('span'),{yPercent:110,duration:.9,ease:'power4.out',stagger:.08,scrollTrigger:{trigger:h,start:'top 85%',once:true}});});gsap.utils.toArray('.reveal').forEach(el=>{gsap.to(el,{opacity:1,y:0,duration:.85,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}});});gsap.from('#axisx',{scaleX:0,duration:1.1,ease:'power3.out',scrollTrigger:{trigger:'#plot',start:'top 72%',once:true}});gsap.from('#plot .node .dot',{scale:0,opacity:0,duration:.5,ease:'back.out(1.6)',stagger:.05,transformOrigin:'50% 50%',scrollTrigger:{trigger:'#plot',start:'top 72%',once:true}});gsap.to('#procFill',{height:'100%',ease:'none',scrollTrigger:{trigger:'#proc',start:'top 70%',end:'bottom 60%',scrub:true}});gsap.to('#marqA',{xPercent:-50,ease:'none',scrollTrigger:{trigger:'.marquee',start:'top bottom',end:'bottom top',scrub:1}});document.querySelectorAll('.num').forEach(el=>{const to=+el.dataset.to,v=el.querySelector('.v');gsap.to({n:0},{n:to,duration:1.6,ease:'power2.out',snap:{n:1},onUpdate(){v.textContent=Math.round(this.targets()[0].n);},scrollTrigger:{trigger:el,start:'top 90%',once:true}});});document.querySelectorAll('.big-cta,.nav-cta').forEach(btn=>{btn.addEventListener('pointermove',e=>{const r=btn.getBoundingClientRect();gsap.to(btn,{x:(e.clientX-r.left-r.width/2)*.3,y:(e.clientY-r.top-r.height/2)*.4,duration:.4,ease:'power3'});});btn.addEventListener('pointerleave',()=>gsap.to(btn,{x:0,y:0,duration:.5,ease:'elastic.out(1,.4)'}));});} else {gsap.set('.reveal',{opacity:1,y:0});document.querySelectorAll('.num').forEach(el=>el.querySelector('.v').textContent=el.dataset.to);}
+    });
+  </script>
+  <script>
+    const ROZA_CONFIG={assistantEndpoint:"",supabaseAnonKey:"",assistantName:"Roza Lab Assistant"};
+    (function(){const fab=document.getElementById('rozaFab'),panel=document.getElementById('rozaPanel'),body=document.getElementById('rpBody'),input=document.getElementById('rpInput'),sendBtn=document.getElementById('rpSend'),closeBtn=document.getElementById('rpClose'),chipsBox=document.getElementById('rpChips'),modeEl=document.getElementById('rpMode');const LIVE=!!ROZA_CONFIG.assistantEndpoint;const sid='roza-'+Math.abs(Date.now()^(Math.random()*1e9|0)).toString(36);const history=[];modeEl.innerHTML=LIVE?'Connected to <b>LangSmith Fleet</b>':'Demo mode — set <b>assistantEndpoint</b> to go live';const STARTERS=["Why reject black sesame + vanilla?","What's your hero SKU?","How do you scale to a factory?","What's your process?"];chipsBox.innerHTML=STARTERS.map(s=>`<button class="chip" data-cursor>${s}</button>`).join('');chipsBox.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{input.value=c.textContent;send();}));function open(){panel.classList.add('open');fab.classList.add('hidden');if(!body.dataset.greeted){body.dataset.greeted=1;bot(`Hi — I'm the ${ROZA_CONFIG.assistantName}. Ask me about our pairings, any SKU, the process, or how we scale a flavour to a factory. What are you building?`);}setTimeout(()=>input.focus(),300)}function close(){panel.classList.remove('open');fab.classList.remove('hidden')}document.querySelectorAll('[data-open-chat]').forEach(b=>b.addEventListener('click',open));closeBtn.addEventListener('click',close);const scroll=()=>body.scrollTop=body.scrollHeight;function add(t,c){const d=document.createElement('div');d.className='msg '+c;d.textContent=t;body.appendChild(d);scroll();return d}function bot(t){add(t,'bot');history.push({role:'assistant',content:t})}function user(t){add(t,'user');history.push({role:'user',content:t})}function typing(){const d=document.createElement('div');d.className='typing';d.innerHTML='<i></i><i></i><i></i>';body.appendChild(d);scroll();return d}async function send(){const text=input.value.trim();if(!text)return;input.value='';input.style.height='auto';sendBtn.disabled=true;user(text);const t=typing();try{const reply=LIVE?await callFleet(text):await demo(text);t.remove();bot(reply)}catch(e){t.remove();add("I couldn't reach the lab just now. Try again, or email hello@rozalab.studio.",'err');console.error(e)}finally{sendBtn.disabled=false;input.focus()}}async function callFleet(message){const res=await fetch(ROZA_CONFIG.assistantEndpoint,{method:'POST',headers:{'Content-Type':'application/json',...(ROZA_CONFIG.supabaseAnonKey?{'Authorization':'Bearer '+ROZA_CONFIG.supabaseAnonKey,'apikey':ROZA_CONFIG.supabaseAnonKey}:{} )},body:JSON.stringify({message,session_id:sid,history:history.slice(-10)})});if(!res.ok)throw new Error('HTTP '+res.status);const d=await res.json();return d.reply||d.output||d.message||'…'}function demo(m){return new Promise(r=>setTimeout(()=>r(answer(m)),500+Math.random()*450))}function answer(q){const s=q.toLowerCase();const f=a=>a.find(x=>s.includes(x));if(f(['reject','vanilla','why not'])){const p=PAIRINGS.find(p=>p.rej);return `We rejected ${p.a} × ${p.b} (confidence ${p.conf.toFixed(2)}). ${p.note}`;}if(f(['hero','best','signature','flagship'])){const h=SKUS[0];return `Our hero SKU is ${h.name} — ${h.desc} Prep ~${h.time} min.`;}if(f(['scale','factory','manufactur','qsr','production'])) return `We scale in four stages: 01 Sample development → 02 Pilot production → 03 Manufacturing partner → 04 QSR growth. Each flavour arrives with its formulation, process sheet and control points so a plant can run it without guesswork.`;if(f(['process','sop','pasteur','ccp','safety','how do you make'])) return `Every batch runs the same five steps: sanitise & weigh, blend the dry base, pasteurise at 82–85 °C and cool, age–flavour–churn, then harden, label & store. Control points — temperature, sanitation, holding time, mix integrity — are logged per batch.`;if(f(['bench','prototype','new','trial','developing','invention'])) return `On the bench: cold-brew & cocoa nib, a yuzu cheesecake bar, burnt milk & miso gelato, and a lychee-rose-almond mousse.`;if(f(['pairing','atlas','combination','confidence'])){const t=[...PAIRINGS].filter(p=>!p.rej).sort((a,b)=>b.conf-a.conf).slice(0,3);return `Highest-confidence pairings: ${t.map(p=>`${p.a} × ${p.b} (${p.conf.toFixed(2)})`).join(', ')}. Hover any node on the Atlas for its tasting note.`;}if(f(['yuzu','lychee','saffron','sesame','mango','coconut','espresso'])){const p=PAIRINGS.find(p=>s.includes(p.a.toLowerCase().split(' ')[0]));if(p)return `${p.a} × ${p.b} — ${p.cat}, confidence ${p.conf.toFixed(2)}. ${p.note}`;}if(f(['price','cost','quote','how much'])) return `Pricing depends on scope — a single scoop is very different from a stick range. Tell me what you're planning and I'll brief the lab, or email hello@rozalab.studio.`;if(f(['hi','hello','hey','who are you','help','what can you'])) return `I'm the ${ROZA_CONFIG.assistantName}. Ask about our pairings, our four SKUs, the process and control points, or how we scale to manufacturing.`;return `I can speak to our pairings, our SKUs, the process, and how we scale to a factory. Which is closest to what you need? (Once connected to the Fleet agent, I'll answer from your live lab data.)`;}input.addEventListener('input',()=>{input.style.height='auto';input.style.height=Math.min(input.scrollHeight,96)+'px';});input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send();}});sendBtn.addEventListener('click',send);})();
+  </script>
+</body>
 </html>
