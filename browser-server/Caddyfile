@@ -1,0 +1,33 @@
+{
+	auto_https off
+}
+
+:{$PORT} {
+	# --- MCP endpoint for Fleet (protected by one shared approval PIN) ---
+	@mcp_auth {
+		path /mcp*
+		header x-approval-pin {$APPROVAL_PIN}
+	}
+	handle @mcp_auth {
+		reverse_proxy localhost:8931
+	}
+	@mcp_noauth path /mcp*
+	handle @mcp_noauth {
+		respond "unauthorized" 401
+	}
+
+	# --- Live view: watch the browser and take control ---
+	# Open https://<your-app>/view/vnc.html and use the same 4-digit PIN.
+	handle_path /view/* {
+		reverse_proxy localhost:6080
+	}
+
+	# Health check
+	handle /healthz {
+		reverse_proxy localhost:8931
+	}
+
+	handle {
+		respond "browser server up. MCP: /mcp | Live view: /view/vnc.html" 200
+	}
+}
