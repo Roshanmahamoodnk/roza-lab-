@@ -11,6 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     ANONYMIZED_TELEMETRY=false \
     PORT=8080 \
     BROWSER_USE_USER_DATA_DIR=/data/profile \
+    BU_CDP_URL=http://127.0.0.1:9222 \
     HOME=/root \
     XDG_CONFIG_HOME=/root/.config
 
@@ -31,10 +32,8 @@ RUN npm install -g supergateway
 # browser-use itself (same code as the GitHub repo, published to PyPI)
 RUN pip install --no-cache-dir "browser-use[cli]" langfuse
 
-# Persistent browser profile and browser-use config that attaches to the Chrome we start below
-RUN mkdir -p /root/.config/browseruse /data/profile /etc/caddy && \
-    printf '{"browser_profile":{"cdp_url":"http://127.0.0.1:9222","keep_alive":true}}' \
-    > /root/.config/browseruse/config.json
+# Persistent browser profile directory for logins and downloads
+RUN mkdir -p /data/profile /etc/caddy
 
 COPY supervisord.conf /etc/supervisord.conf
 COPY Caddyfile /etc/caddy/Caddyfile
