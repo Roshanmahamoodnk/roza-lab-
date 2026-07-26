@@ -72,7 +72,7 @@ LANGFUSE_HOST=https://cloud.langfuse.com
 LANGFUSE_TRACE_INTERVAL_SECONDS=60
 ```
 
-With those Langfuse vars present, the container emits periodic `browser-server-probe` traces that capture process status, TCP ports, and the local HTTP checks for `/`, `/healthz`, and the MCP health endpoint.
+With those Langfuse vars present, the container emits periodic `browser-server-probe` traces that capture process status, TCP ports, and the local HTTP checks for `/`, `/healthz`, and `/readyz`.
 
 ## Connect it to Fleet
 
@@ -99,4 +99,5 @@ Use the same `APPROVAL_PIN` from your env file. You can watch the session live a
 - The browser is exposed through a public URL so Fleet can reach it.
 - `RECOVERY_EMAIL` is just a simple recovery contact for your setup notes; the minimal version still uses the 4-digit approval PIN as the actual gate.
 - `BU_CDP_URL` tells browser-use to attach to the Chromium instance that starts inside the container, which is the fast path that avoids per-call relaunches.
+- `/healthz` returns quickly so Railway can see the service is alive; `/readyz` checks whether the MCP bridge is ready.
 - If you want a VM-based version instead of Railway, I can adapt the same layout for that.
