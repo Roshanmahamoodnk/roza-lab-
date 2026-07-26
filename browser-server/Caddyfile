@@ -26,8 +26,11 @@
 		reverse_proxy 127.0.0.1:6080
 	}
 
-	# Health check
+	# Health checks
 	handle /healthz {
+		respond "ok" 200
+	}
+	handle /readyz {
 		reverse_proxy 127.0.0.1:8931
 	}
 
