@@ -26,7 +26,7 @@ PORT = int(os.getenv("PORT", "8080"))
 PROCESS_PATTERNS = {
     "xvfb": "Xvfb :99",
     "x11vnc": "x11vnc -display :99",
-    "novnc": "websockify --web /usr/share/novnc 6080 localhost:5900",
+    "novnc": "websockify --web /usr/share/novnc 6080 127.0.0.1:5900",
     "mcp": 'supergateway --stdio "browser-use --mcp"',
     "caddy": "caddy run --config /etc/caddy/Caddyfile",
 }
@@ -35,7 +35,7 @@ TCP_PORTS = [5900, 6080, 8931, PORT]
 HTTP_URLS = {
     "root": f"http://127.0.0.1:{PORT}/",
     "healthz": f"http://127.0.0.1:{PORT}/healthz",
-    "mcp-health": "http://127.0.0.1:8931/healthz",
+    "readyz": f"http://127.0.0.1:{PORT}/readyz",
 }
 
 
