@@ -58,6 +58,7 @@ docker compose up --build
 PORT=8080
 APPROVAL_PIN=1234
 RECOVERY_EMAIL=chakkumamu8777@gmail.com
+BU_CDP_URL=http://127.0.0.1:9222
 ```
 
 4. Give the service a public domain.
@@ -97,4 +98,5 @@ Use the same `APPROVAL_PIN` from your env file. You can watch the session live a
 - There is no LLM key in this template.
 - The browser is exposed through a public URL so Fleet can reach it.
 - `RECOVERY_EMAIL` is just a simple recovery contact for your setup notes; the minimal version still uses the 4-digit approval PIN as the actual gate.
+- `BU_CDP_URL` tells browser-use to attach to the Chromium instance that starts inside the container, which is the fast path that avoids per-call relaunches.
 - If you want a VM-based version instead of Railway, I can adapt the same layout for that.
