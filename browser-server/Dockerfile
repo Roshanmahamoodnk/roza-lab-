@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN npm install -g supergateway
 
 # browser-use itself (same code as the GitHub repo, published to PyPI)
-RUN pip install --no-cache-dir "browser-use[cli]"
+RUN pip install --no-cache-dir "browser-use[cli]" langfuse
 
 # Chromium for the agent to drive
 RUN python -m playwright install --with-deps chromium || \
@@ -35,6 +35,8 @@ ENV BROWSER_USE_USER_DATA_DIR=/data/profile
 
 COPY supervisord.conf /etc/supervisord.conf
 COPY Caddyfile /etc/caddy/Caddyfile
+COPY trace_monitor.py /opt/trace_monitor.py
+RUN chmod +x /opt/trace_monitor.py
 
 # Railway/Fly inject PORT; default for local runs
 ENV PORT=8080
