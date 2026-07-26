@@ -62,6 +62,16 @@ RECOVERY_EMAIL=chakkumamu8777@gmail.com
 
 4. Give the service a public domain.
 5. If you want persistence across restarts, add a volume at `/data`.
+6. If you want Langfuse traces for browser-server health probes, also set:
+
+```env
+LANGFUSE_PUBLIC_KEY=your_langfuse_public_key
+LANGFUSE_SECRET_KEY=your_langfuse_secret_key
+LANGFUSE_HOST=https://cloud.langfuse.com
+LANGFUSE_TRACE_INTERVAL_SECONDS=60
+```
+
+With those Langfuse vars present, the container emits periodic `browser-server-probe` traces that capture process status, TCP ports, and the local HTTP checks for `/`, `/healthz`, and the MCP health endpoint.
 
 ## Connect it to Fleet
 
