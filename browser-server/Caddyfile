@@ -21,6 +21,10 @@
 	handle_path /view/* {
 		reverse_proxy localhost:6080
 	}
+	# Some noVNC builds request the websocket on /websockify directly.
+	handle /websockify* {
+		reverse_proxy localhost:6080
+	}
 
 	# Health check
 	handle /healthz {
