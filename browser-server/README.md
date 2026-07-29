@@ -1,5 +1,5 @@
 # Your Own Agent Browser Server for Fleet
-### (self-hosted agent-browser + live view + takeover — no Browser Use Cloud credits, no LLM key)
+### (self-hosted agent-browser + live view + takeover — no cloud browser credits, no LLM key)
 
 What this gives you:
 
