@@ -15,12 +15,14 @@ Cryogenic flavour engineering site for Carino. The main experience is a dark, ci
 ## Live assistant backend
 - `api/assistant.js` — serverless assistant endpoint for `/api/assistant` on Vercel
 - `assistant-server.js` — standalone Node/Express assistant endpoint for custom servers
+- `browser-server/` — self-hosted browser MCP server powered by agent-browser, with live view and approval-gated Fleet access
 - `.env.example` — environment variables for OpenAI, Tavily, and LangSmith tracing
 
 ## Recommended deployment
-- *If you want the assistant to work on the same domain as the site*, deploy the repo to Vercel.
+- If you want the assistant to work on the same domain as the site, deploy the repo to Vercel.
 - Vercel will serve the static pages and `api/assistant.js` together, so the frontend can call `/api/assistant` directly.
 - GitHub Pages can only host the static files; it cannot run the live assistant endpoint.
+- If you want live browser automation in Fleet, deploy `browser-server/` as a separate Railway service and add it as a custom MCP connection.
 
 ## Live assistant setup
 - Set `OPENAI_API_KEY` and `TAVILY_API_KEY` so the assistant can research live and answer as Roza Lab Assistant.
