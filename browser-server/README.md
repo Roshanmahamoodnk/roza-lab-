@@ -1,10 +1,10 @@
-# Your Own Browser Server for Fleet
-### (self-hosted browser-use + live view + takeover — no Browser Use Cloud credits, no LLM key)
+# Your Own Agent Browser Server for Fleet
+### (self-hosted agent-browser + live view + takeover — no Browser Use Cloud credits, no LLM key)
 
 What this gives you:
 
-- A browser running in your cloud container, not on your laptop
-- Fleet drives it directly through low-level MCP tools like navigate, click, type, and extract
+- A Chromium browser running in your cloud container, not on your laptop
+- Fleet drives it directly through low-level MCP tools from agent-browser like `open`, `snapshot`, `click`, `fill`, `type`, `screenshot`, and `eval`
 - A live view page where you can watch the browser and take over for logins, MFA, or CAPTCHAs
 - A persistent browser profile so logins survive restarts
 
@@ -58,7 +58,6 @@ docker compose up --build
 PORT=8080
 APPROVAL_PIN=1234
 RECOVERY_EMAIL=chakkumamu8777@gmail.com
-BU_CDP_URL=http://127.0.0.1:9222
 ```
 
 4. Give the service a public domain.
@@ -97,7 +96,8 @@ Use the same `APPROVAL_PIN` from your env file. You can watch the session live a
 
 - There is no LLM key in this template.
 - The browser is exposed through a public URL so Fleet can reach it.
+- `agent-browser` talks to the Chromium instance through CDP on port `9222`, so the live view and the MCP session stay in sync.
+- `supergateway` bridges the stdio MCP server to Streamable HTTP for Fleet.
 - `RECOVERY_EMAIL` is just a simple recovery contact for your setup notes; the minimal version still uses the 4-digit approval PIN as the actual gate.
-- `BU_CDP_URL` tells browser-use to attach to the Chromium instance that starts inside the container, which is the fast path that avoids per-call relaunches.
 - `/healthz` returns quickly so Railway can see the service is alive; `/readyz` checks whether the MCP bridge is ready.
 - If you want a VM-based version instead of Railway, I can adapt the same layout for that.
