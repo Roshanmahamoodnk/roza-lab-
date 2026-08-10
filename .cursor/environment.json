@@ -4,7 +4,7 @@
   "terminals": [
     {
       "name": "assistant-api",
-      "command": "PORT=3000 npm start"
+      "command": "npm install --no-audit --no-fund && PORT=3000 npm start"
     },
     {
       "name": "web",
