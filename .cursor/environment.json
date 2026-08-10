@@ -1,0 +1,15 @@
+{
+  "name": "Rozalab × Carino",
+  "install": "npm install",
+  "terminals": [
+    {
+      "name": "assistant-api",
+      "command": "npm install --no-audit --no-fund && PORT=3000 npm start"
+    },
+    {
+      "name": "web",
+      "command": "WEB_PORT=8080 API_TARGET=http://127.0.0.1:3000 node .cursor/dev-server.mjs"
+    }
+  ],
+  "ports": [8080, 3000]
+}
